@@ -1,8 +1,12 @@
 // app/page.tsx
+"use client";
 import Head from "next/head";
+import { useEffect, useState } from 'react';
 import Navbar from '../components/navbar';
+import styles from '../styles.module.css'; 
 
 const Home = () => {
+  const [animate] = useState(true);
   return (
     <div className="flex flex-col w-full">
       <Navbar />
@@ -12,18 +16,17 @@ const Home = () => {
       </Head>
       {/* Adjust the top margin to move the content up */}
       <main className="flex flex-col items-center w-full px-20 text-center mt-8">
-  <div className="flex flex-col items-center">
-    <h1 className="text-blue-600 text-9xl font-bold">Joshua</h1>
-    <h2 className="text-blue-600 text-9xl font-bold">Chou</h2>
-  </div>
-  <br></br>
-  <br></br>
-  <br></br>
-
-  <div className="mt-3 text-2xl">
-    <p className="font bold" >I am a high school student and<br></br> <p className="text-blue-600 font bold">software developer </p></p>
-  </div>
-</main>
+      <div className={`flex flex-col items-center ${animate ? styles.startSlideRight : ''}`}>
+        <h1 className="text-blue-600 text-9xl font-bold">Joshua</h1>
+        <h2 className="text-blue-600 text-9xl font-bold">Chou</h2>
+      </div>
+      <br /><br /><br />
+      <div className={`mt-3 text-2xl ${animate ? styles.startSlideLeft : ''}`}>
+        <p className="font-bold">I am a high school student and a<br />
+          <span className="text-blue-600">software developer</span>
+        </p>
+      </div>
+    </main>
       {/* Add a section for projects */}
       <section className="w-full">
       <section className=" py-8">
