@@ -7,6 +7,12 @@ import styles from '../styles.module.css';
 
 const Home = () => {
   const [animate] = useState(true);
+  const projects = [
+    // Assuming you have an array of projects
+    { title: 'Grade Genius', description: 'A course manager app utilizing Flask, SQl and Javascript. Allows students to track course assessments, grades, goals, study times and notes. ', imageUrl: '/grade-genius.png' ,link:'https://gradegenius.joshuachou.com'},
+    { title: 'Relief Exchange', description: 'Designed to alleviate poverty, this platform provides a connection for donors and those in need. It facilitates an impactful exchange of recourses, easily reaching the underprivileged and those willing to help. ', imageUrl: '/relief-ex.png' ,link:"https://reliefexchange.aritrosaha.ca/"},
+    // ... more projects
+  ];
   return (
     <div className="flex flex-col w-full">
       <Navbar />
@@ -29,95 +35,32 @@ const Home = () => {
     </main>
       {/* Add a section for projects */}
       <section className="w-full">
-      <section className=" py-8">
-  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
-    {/* Sample project card */}
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-      <img className="w-full h-56 object-cover object-center" src="/project-image.jpg" alt="project image" />
-      <div className="p-4">
-        <h3 className="text-lg font-semibold">Project Title</h3>
-        <p className="mt-2 text-gray-600">Short description of the project...</p>
-        <div className="mt-4">
-          <a href="#" className="text-teal-600 hover:underline">Read more</a>
+  {projects.map((project, index) => (
+    <div key={project.title} className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center my-8`}>
+      
+      {/* Project Image */}
+      <a target='_blank' rel="noopener noreferrer" href={project.link} className="w-full md:w-1/2 hover:translate-y-[-5px] transition-transform duration-300">
+        <img className="w-full h-auto object-cover" src={project.imageUrl} alt={project.title} />
+      </a>
+      
+      {/* Project Description */}
+      <div className="w-full md:w-1/2 mt-4 md:mt-0 md:ml-4 flex justify-center md:justify-start">
+        <div className="text-center md:text-left mx-auto md:mx-500 px-4 md:px-0 w-41">
+          <h3 className="text-lg font-bold">{project.title}</h3>
+          <p className="mt-2 text-white-600">{project.description}</p>
+          <div className="mt-4">
+            {/* Other content */}
+          </div>
         </div>
       </div>
-      
-    </div>
 
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-      <img className="w-full h-56 object-cover object-center" src="/project-image.jpg" alt="project image" />
-      <div className="p-4">
-        <h3 className="text-lg font-semibold">Project Title</h3>
-        <p className="mt-2 text-gray-600">Short description of the project...</p>
-        <div className="mt-4">
-          <a href="#" className="text-teal-600 hover:underline">Read more</a>
-        </div>
-      </div>
-      
     </div>
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-      <img className="w-full h-56 object-cover object-center" src="/project-image.jpg" alt="project image" />
-      <div className="p-4">
-        <h3 className="text-lg font-semibold">Project Title</h3>
-        <p className="mt-2 text-gray-600">Short description of the project...</p>
-        <div className="mt-4">
-          <a href="#" className="text-teal-600 hover:underline">Read more</a>
-        </div>
-      </div>
-      
-    </div>
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-      <img className="w-full h-56 object-cover object-center" src="/project-image.jpg" alt="project image" />
-      <div className="p-4">
-        <h3 className="text-lg font-semibold">Project Title</h3>
-        <p className="mt-2 text-gray-600">Short description of the project...</p>
-        <div className="mt-4">
-          <a href="#" className="text-teal-600 hover:underline">Read more</a>
-        </div>
-      </div>
-      
-    </div>
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-      <img className="w-full h-56 object-cover object-center" src="/project-image.jpg" alt="project image" />
-      <div className="p-4">
-        <h3 className="text-lg font-semibold">Project Title</h3>
-        <p className="mt-2 text-gray-600">Short description of the project...</p>
-        <div className="mt-4">
-          <a href="#" className="text-teal-600 hover:underline">Read more</a>
-        </div>
-      </div>
-      
-    </div>
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-      <img className="w-full h-56 object-cover object-center" src="/project-image.jpg" alt="project image" />
-      <div className="p-4">
-        <h3 className="text-lg font-semibold">Project Title</h3>
-        <p className="mt-2 text-gray-600">Short description of the project...</p>
-        <div className="mt-4">
-          <a href="#" className="text-teal-600 hover:underline">Read more</a>
-        </div>
-      </div>
-      
-    </div>
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-      <img className="w-full h-56 object-cover object-center" src="/project-image.jpg" alt="project image" />
-      <div className="p-4">
-        <h3 className="text-lg font-semibold">Project Title</h3>
-        <p className="mt-2 text-gray-600">Short description of the project...</p>
-        <div className="mt-4">
-          <a href="#" className="text-teal-600 hover:underline">Read more</a>
-        </div>
-      </div>
-      
-    </div>
-    
-  </div>
+  ))}
 </section>
+<footer className="flex items-center justify-center w-full h-24 border-t">
+  {/* Footer content */}
+</footer>
 
-      </section>
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        {/* Footer content */}
-      </footer>
     </div>
   )
 }
