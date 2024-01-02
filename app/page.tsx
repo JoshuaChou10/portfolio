@@ -4,14 +4,15 @@ import Head from "next/head";
 import { useEffect, useState } from 'react';
 import Navbar from '../components/navbar';
 import styles from '../styles.module.css'; 
-
+//relief exchange github
+// https://github.com/AritroSaha10/ReliefExchange-ICS4U/tree/ce97ac9770ed0dded6ecdace65ab861707565b3e
 const Home = () => {
   const [animate] = useState(true);
   const projects = [
 
     { title: 'Relief Exchange', description: 'Designed to alleviate poverty, this platform provides a connection for donors and those in need. It facilitates an impactful exchange of recourses, easily reaching the underprivileged and those willing to help. I worked on both the backend and frontend, utilizing Golang, Next.js and Firebase. ', imageUrl: '/relief-ex.png' ,link:"https://reliefexchange.aritrosaha.ca/"},
-    { title: 'Grade Genius', description: 'A course manager app utilizing Flask, SQl and Javascript. Allows students to track course assessments, grades, goals, study times and notes. ', imageUrl: '/grade-genius.png' ,link:'https://gradegenius.joshuachou.com'},
-    { title: 'Learn Chemistry-Brookedge Academy', description: "An interactive app developed for Brookedge Academy. Complete with quizzes and lessons. Posted on Brookedge Academy's main website, and used in the Young Chemists Workshop. ", imageUrl: '/chem.png' ,link:'https://learn-chemistry.joshuac16.repl.co/'},
+    { title: 'Grade Genius', description: 'A comprehensive course manager app utilizing Flask, SQl and Javascript. Allows students to track course assessments, grades, goals, study times and notes. ', imageUrl: '/grade-genius.png' ,link:'https://gradegenius.joshuachou.com'},
+    { title: 'Learn Chemistry-Brookedge Academy', description: "An interactive app developed for Brookedge Academy. I was awarded the volunteer of the year award by the Academy for the development of this app.  Complete with quizzes and lessons. Posted on Brookedge Academy's main website, and used in the Young Chemists Workshop. ", imageUrl: '/chem.png' ,link:'https://learn-chemistry.joshuac16.repl.co/'},
 
   ];
   return (
@@ -40,7 +41,7 @@ const Home = () => {
     <div key={project.title} className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center my-8`}>
       
       {/* Project Image */}
-      <a target='_blank' rel="noopener noreferrer" href={project.link} className="w-full md:w-1/2 hover:translate-y-[-5px] transition-transform duration-300">
+      <a target='_blank' rel="noopener noreferrer" href={project.link} className="w-full md:w-1/2 hover:translate-y-[-10px] transition-transform duration-300">
         <img className="w-full h-auto object-cover" src={project.imageUrl} alt={project.title} />
       </a>
       

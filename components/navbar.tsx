@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className="bg-gray-900 rounded-lg w-full">
+    <nav className="bg-blue-900 rounded-lg w-full">
       <div className="flex justify-between items-center h-16 px-4 sm:px-6 lg:px-8">
         <Link href="/" legacyBehavior>
           <a className="text-white font-bold">Joshua</a>
@@ -12,7 +12,6 @@ const Navbar = () => {
           <Link href="/" legacyBehavior><a className="text-gray-300 hover:text-white">Home</a></Link>
           <Link href="/about" legacyBehavior><a className="text-gray-300 hover:text-white">About</a></Link>
           <Link href="/experience" legacyBehavior><a className="text-gray-300 hover:text-white">Experience</a></Link>
-          <Link href="/skills-awards" legacyBehavior><a className="text-gray-300 hover:text-white">Skills & Awards</a></Link>
           <Link href="/projects" legacyBehavior><a className="text-gray-300 hover:text-white">Projects</a></Link>
         </div>
         <Link href="/contact" legacyBehavior>
