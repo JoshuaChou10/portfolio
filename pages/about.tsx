@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 import Navbar from '../components/navbar';
 import '../app/globals.css'
+import styles from '../styles.module.css'; 
 const About = () => {
   return (
     <>
@@ -26,7 +27,7 @@ const About = () => {
           <h1 className="text-4xl font-bold">Hi,  I'm Joshua</h1>
           <p className="mt-2 text-lg">
             {/* Add your description here */}
-           I'm a high school student and a software developer in Ontario. As a programmer I have always enjoyed watching the logic flow into code. 
+           I'm a high school student and a software developer in Ontario. <br></br>As a programmer I have always enjoyed watching the logic flow into code. 
            I aim to create programs that will benefit others, whether that's by creating educational applications, or developing tools that simplify life and improve efficiency. 
           </p>
         </div>
@@ -36,68 +37,74 @@ const About = () => {
     <h2 className="text-3xl font-bold text-center">Hobbies and Interests</h2>
     <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
       {/* Hobbies: Repeat for each hobby */}
-      <div className="hobby-box bg-gradient-to-r from-blue-500 to-teal-400 rounded-lg p-4 shadow-lg">
+      <div className="hobby-box bg-gradient-to-r from-blue-500 to-teal-500 rounded-lg p-4 shadow-lg">
         <h3 className="text-xl font-bold">Teaching</h3>
-        <p>Description of Hobby 1</p>
+        <p>I have always enjoyed interacting with and helping others. During the pandemic, I started volunteering at various organizations. I am now a coding and Mathematics tutor on Superprof. </p>
       </div>
-      <div className="hobby-box bg-gradient-to-r from-pink-500 to-orange-400 rounded-lg p-4 shadow-lg">
+      <div className="hobby-box bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg p-4 shadow-lg">
         <h3 className="text-xl font-bold">Meditating</h3>
-        <p>Description of Hobby 2</p>
+        <p>I have been meditating daily for 5 years. It's a nice break from daily worries and I always feel much lighter afterwards. </p>
       </div>
       <div className="hobby-box bg-gradient-to-r from-purple-500 to-indigo-400 rounded-lg p-4 shadow-lg">
         <h3 className="text-xl font-bold">Playing Piano</h3>
-        <p>Description of Hobby 3</p>
+        <p>I have been playing piano for over 10 years. I enjoy making music, and it helps me relax. </p>
       </div>
-      <div className="hobby-box bg-gradient-to-r from-green-500 to-lime-400 rounded-lg p-4 shadow-lg">
+      <div className="hobby-box bg-gradient-to-r from-green-600 to-lime-600 rounded-lg p-4 shadow-lg">
         <h3 className="text-xl font-bold">Frisbee</h3>
-        <p>Description of Hobby 4</p>
+        <p>I play Ultimate Frisbee at school, and I find it is a great way to have fun and exercise teamwork.  </p>
       </div>
     </div>
   </div>
 </section>
 <section className="py-6">
   <div className="max-w-4xl mx-auto px-4">
-    <h2 className="text-3xl font-bold text-center">Skills and Awards</h2>
-    <div className="mt-4 flex flex-col md:flex-row gap-4">
+    <h2 className="text-3xl font-bold text-center">Extracurriculars</h2>
+    <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+      {/* Hobbies: Repeat for each hobby */}
+      <a target="_blank" href="https://frasercodes.vercel.app/">
+      <div className="hobby-box bg-gradient-to-r from-blue-500 to-teal-500 rounded-lg p-4 shadow-lg hover:translate-y-[-7px] transition-transform duration-300">
+        <h3 className="text-xl font-bold underline">Executive Teaching Lead at John Fraser Computer Science Club </h3>
+
+        <b>June 2023-June 2024</b>
+        <br></br>
+        <p>I joined the Executive team of the computer science club after a successful application and interview. I lead weekly meetings covering computer science topics,
+           and answer any questions that may come up. Additionally, I contribute to the development of the <u >club website</u>, promote the club on social media and review general member applications. </p>
+       
+      </div>
+      </a>
+      <a target="_blank" href='https://www.udemy.com/course/the-web-developer-bootcamp/'>
+      <div className="hobby-box bg-gradient-to-r from-blue-500 to-teal-500 rounded-lg p-4 shadow-lg hover:translate-y-[-7px] transition-transform duration-300">
+        <h3 className="text-xl font-bold underline">The Web Developer Bootcamp</h3>
       
-      {/* Skills Section */}
-      <div className="flex-1">
-        <h3 className="text-2xl font-bold text-center md:text-left">Skills</h3>
-        <div className="grid grid-cols-1 md:grid-cols-1 gap-4 mt-2">
-          {/* Repeat for each skill */}
-          <div className="skill-box bg-gradient-to-r from-blue-500 to-teal-400 rounded-lg p-4 shadow-lg">
-            <h4 className="text-xl font-bold">Mathematics</h4>
-            <p>Description of Skill 1</p>
-          </div>
-          <div className="skill-box bg-gradient-to-r from-blue-500 to-teal-400 rounded-lg p-4 shadow-lg">
-            <h4 className="text-xl font-bold">Coding</h4>
-            <p>Bootcamps, projects. Python, Golang, Nextjs, Java</p>
-          </div>
-        </div>
+        <b>September 2020 - February 2021</b>
+        <br></br>
+        <p>kiuiusdfasdfkiuiusdfasdfkiuiusdfasdfkiuiusdfasdfkiuiusdfasdfkiuiusdfasdfkiuiusdfasdf kiuiusdfasdf kiuiusdfasdf kiuiusdfasdf kiuiusdfasdf </p>
       </div>
-
-      {/* Awards Section */}
-      <div className="flex-1">
-        <h3 className="text-2xl font-bold text-center md:text-left">Awards</h3>
-        <div className="grid grid-cols-1 md:grid-cols-1 gap-4 mt-2">
-          {/* Repeat for each award */}
-          <div className="award-box bg-gradient-to-r from-pink-500 to-orange-400 rounded-lg p-4 shadow-lg">
-            <h4 className="text-xl font-bold">Certificate of Distinction-Fermat Contest 2023</h4>
-            <p>Description of Award 1</p>
-          </div>
-          <div className="award-box bg-gradient-to-r from-pink-500 to-orange-400 rounded-lg p-4 shadow-lg">
-            <h4 className="text-xl font-bold">Volunteer of The Year Award-Brookedge Academy</h4>
-            <p>Description of Award 2</p>
-          </div>
-        </div>
+      </a>
+      <div className="hobby-box bg-gradient-to-r from-purple-500 to-indigo-400 rounded-lg p-4 shadow-lg">
+        <h3 className="text-xl font-bold">General Member at John Fraser Computer Science Club</h3>
+        <b>September 2021 - June 2023</b>
+        <br></br>
+        <p>asdfasdfadsf</p>
       </div>
+      <a target="_blank" href='https://www.udemy.com/course/100-days-of-code/'>
+      <div className="hobby-box bg-gradient-to-r from-blue-500 to-teal-500 rounded-lg p-4 shadow-lg hover:translate-y-[-7px] transition-transform duration-300">
+        <h3 className="text-xl font-bold underline">
+100 Days of Code: The Complete Python Pro Bootcamp for 2023
+</h3>
 
+        <b>September 2020 - February 2021</b>
+        <br></br>
+        <p>kashdfkjasdhfkjasdfsdf </p>
+      </div>
+      </a>
     </div>
   </div>
 </section>
 
     </>
   );
+  
 };
 
 export default About;

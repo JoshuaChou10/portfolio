@@ -1,7 +1,7 @@
 // app/page.tsx
 "use client";
 import Head from "next/head";
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 import Navbar from '../components/navbar';
 import styles from '../styles.module.css'; 
 //relief exchange github
