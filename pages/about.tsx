@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 import Navbar from '../components/navbar';
 import '../app/globals.css'
-import styles from '../styles.module.css'; 
+
 const About = () => {
   return (
     <>
