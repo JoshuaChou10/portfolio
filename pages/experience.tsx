@@ -7,7 +7,7 @@ const Experience = () => {
   return (
     <>
       <Head>
-        <title>Experience | My Portfolio</title>
+        <title>Experience | Joshua Chou</title>
       </Head>
       <Navbar />
       <div className="bg-gray-900 text-white min-h-screen">

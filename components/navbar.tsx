@@ -11,9 +11,10 @@ const Navbar = () => {
         <div className="flex space-x-8"> {/* Adjust the space here */}
           <Link href="/" legacyBehavior><a className="text-gray-300 hover:text-white">Home</a></Link>
           <Link href="/about" legacyBehavior><a className="text-gray-300 hover:text-white">About</a></Link>
+          <Link href="/projects" legacyBehavior><a className="text-gray-300 hover:text-white">Projects</a></Link>
           <Link href="/experience" legacyBehavior><a className="text-gray-300 hover:text-white">Experience</a></Link>
           <Link href="/skills" legacyBehavior><a className="text-gray-300 hover:text-white">Skills and Awards</a></Link>
-          <Link href="/projects" legacyBehavior><a className="text-gray-300 hover:text-white">Projects</a></Link>
+       
         </div>
         <Link href="/contact" legacyBehavior>
           <a className="text-gray-900 bg-white px-6 py-2 rounded-md hover:bg-blue-700 hover:text-white">

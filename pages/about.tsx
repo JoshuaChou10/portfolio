@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>About</title>
+        <title>About | Joshua Chou</title>
       </Head>
       <Navbar />
       <main className="flex flex-col md:flex-row md:justify-center md:items-center md:space-x-6 my-12 mx-auto px-20">
@@ -24,7 +24,7 @@ const About = () => {
         </div>
         {/* Description section */}
         <div className="md:w-2/3 text-center md:text-left">
-          <h1 className="text-4xl font-bold">Hi,  I'm Joshua</h1>
+          <h1 className="text-4xl font-bold">Hi,  I'm Joshua.</h1>
           <p className="mt-2 text-lg">
             {/* Add your description here */}
            I'm a high school student and a software developer in Ontario. <br></br>As a programmer I have always enjoyed watching the logic flow into code. 
