@@ -36,14 +36,14 @@ const About = () => {
   <div className="max-w-4xl mx-auto px-4">
     <h2 className="text-3xl font-bold text-center">Hobbies and Interests</h2>
     <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-      {/* Hobbies: Repeat for each hobby */}
+
       <div className="hobby-box bg-gradient-to-r from-blue-500 to-teal-500 rounded-lg p-4 shadow-lg">
         <h3 className="text-xl font-bold">Teaching</h3>
         <p>I have always enjoyed interacting with and helping others. During the pandemic, I started volunteering at various organizations. I am now a coding and Mathematics tutor on Superprof. </p>
       </div>
       <div className="hobby-box bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg p-4 shadow-lg">
         <h3 className="text-xl font-bold">Meditating</h3>
-        <p>I have been meditating daily for 5 years. It's a nice break from daily worries and I always feel much lighter afterwards. </p>
+        <p>I have been meditating daily for 5 years. It's a way for things to settle down. I always feel much lighter and clearer afterwards. </p>
       </div>
       <div className="hobby-box bg-gradient-to-r from-purple-500 to-indigo-400 rounded-lg p-4 shadow-lg">
         <h3 className="text-xl font-bold">Playing Piano</h3>
@@ -56,48 +56,55 @@ const About = () => {
     </div>
   </div>
 </section>
+
 <section className="py-6">
   <div className="max-w-4xl mx-auto px-4">
     <h2 className="text-3xl font-bold text-center">Extracurriculars</h2>
     <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-      {/* Hobbies: Repeat for each hobby */}
+
       <a target="_blank" href="https://frasercodes.vercel.app/">
       <div className="hobby-box bg-gradient-to-r from-blue-500 to-teal-500 rounded-lg p-4 shadow-lg hover:translate-y-[-7px] transition-transform duration-300">
         <h3 className="text-xl font-bold underline">Executive Teaching Lead at John Fraser Computer Science Club </h3>
 
         <b>June 2023-June 2024</b>
         <br></br>
-        <p>I joined the Executive team of the computer science club after a successful application and interview. I lead weekly meetings covering computer science topics,
-           and answer any questions that may come up. Additionally, I contribute to the development of the <u >club website</u>, promote the club on social media and review general member applications. </p>
+        <p>I joined the Executive team of the computer science club after a successful application and interview. I lead weekly meetings covering computer science topics and readily address any questions from our general members.
+           My contributions extend to helping develop the <u>club website</u>, promoting the club on social media or in events, and reviewing general member applications.  </p>
        
       </div>
       </a>
-      <a target="_blank" href='https://www.udemy.com/course/the-web-developer-bootcamp/'>
+      
       <div className="hobby-box bg-gradient-to-r from-blue-500 to-teal-500 rounded-lg p-4 shadow-lg hover:translate-y-[-7px] transition-transform duration-300">
+      <a target="_blank" href='https://www.udemy.com/course/the-web-developer-bootcamp/'>
         <h3 className="text-xl font-bold underline">The Web Developer Bootcamp</h3>
       
         <b>September 2020 - February 2021</b>
         <br></br>
-        <p>kiuiusdfasdfkiuiusdfasdfkiuiusdfasdfkiuiusdfasdfkiuiusdfasdfkiuiusdfasdfkiuiusdfasdf kiuiusdfasdf kiuiusdfasdf kiuiusdfasdf kiuiusdfasdf </p>
+        <p>I started learning web development with the lessons and projects in this bootcamp. 
+          This program offers a well structured program, covering key areas: HTML,CSS, Javascript, Node.js and MongoDB</p>
+          </a>
       </div>
-      </a>
+    
       <div className="hobby-box bg-gradient-to-r from-purple-500 to-indigo-400 rounded-lg p-4 shadow-lg">
         <h3 className="text-xl font-bold">General Member at John Fraser Computer Science Club</h3>
         <b>September 2021 - June 2023</b>
         <br></br>
-        <p>asdfasdfadsf</p>
+        <p>I started in the computer science club as sa general member, 
+          attending weekly meetings and expanding my knowledge of computer science from competitive programming to machine learning. </p>
       </div>
-      <a target="_blank" href='https://www.udemy.com/course/100-days-of-code/'>
+    
       <div className="hobby-box bg-gradient-to-r from-blue-500 to-teal-500 rounded-lg p-4 shadow-lg hover:translate-y-[-7px] transition-transform duration-300">
+      <a target="_blank" href='https://www.udemy.com/course/100-days-of-code/'>
         <h3 className="text-xl font-bold underline">
 100 Days of Code: The Complete Python Pro Bootcamp for 2023
 </h3>
 
         <b>September 2020 - February 2021</b>
         <br></br>
-        <p>kashdfkjasdhfkjasdfsdf </p>
+        <p>This bootcamp gave me the set of skills needed for backend development in applications. </p>
+        </a>
       </div>
-      </a>
+    
     </div>
   </div>
 </section>
