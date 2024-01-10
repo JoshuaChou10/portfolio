@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 import Navbar from '../components/navbar';
 import '../app/globals.css'
-
+import { FaExternalLinkAlt } from 'react-icons/fa'
 const About = () => {
   return (
     <>
@@ -10,7 +10,9 @@ const About = () => {
         <title>About | Joshua Chou</title>
       </Head>
       <Navbar />
+  
       <main className="flex flex-col md:flex-row md:justify-center md:items-center md:space-x-6 my-12 mx-auto px-20">
+
         {/* Image section */}
         <div className="md:w-1/3 flex justify-center mb-6 md:mb-0">
           <Image 
@@ -62,21 +64,23 @@ const About = () => {
     <h2 className="text-3xl font-bold text-center">Extracurriculars</h2>
     <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
 
-      <a target="_blank" href="https://frasercodes.vercel.app/">
-      <div className="hobby-box bg-gradient-to-r from-blue-500 to-teal-500 rounded-lg p-4 shadow-lg hover:translate-y-[-7px] transition-transform duration-300">
-        <h3 className="text-xl font-bold underline">Executive Teaching Lead at John Fraser Computer Science Club </h3>
-
-        <b>June 2023-June 2024</b>
-        <br></br>
-        <p>I joined the Executive team of the computer science club after a successful application and interview. I lead weekly meetings covering computer science topics and readily address any questions from our general members.
-           My contributions extend to helping develop the <u>club website</u>, promoting the club on social media or in events, and reviewing general member applications.  </p>
-       
-      </div>
-      </a>
+    <div className="hobby-box bg-gradient-to-r from-blue-500 to-teal-500 rounded-lg p-4 shadow-lg hover:translate-y-[-7px] transition-transform duration-300 relative">
+  <a href="https://frasercodes.vercel.app/" target="_blank" className="absolute top-0 right-0 p-2">
+    <FaExternalLinkAlt /> {/* FontAwesome Icon */}
+  </a>
+  <h3 className="text-xl font-bold hover:underline"><a target="_blank" href="https://frasercodes.vercel.app/">Executive Teaching Lead at John Fraser Computer Science Club</a></h3>
+  <b>June 2023-June 2024</b>
+  <br></br>
+  <p>I joined the Executive team of the computer science club after a successful application and interview. I lead weekly meetings covering computer science topics. My contributions extend to leading the Fraser Hacks competition, helping develop 
+    the <u><a target="_blank" href="https://frasercodes.vercel.app/"> club website</a></u>, promoting the club on social media or in events, and reviewing general member applications.</p>
+</div>
       
-      <div className="hobby-box bg-gradient-to-r from-blue-500 to-teal-500 rounded-lg p-4 shadow-lg hover:translate-y-[-7px] transition-transform duration-300">
+      <div className="hobby-box bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg p-4 shadow-lg hover:translate-y-[-7px] transition-transform duration-300 relative">
+      <a href="https://www.udemy.com/course/100-days-of-code/" target="_blank" className="absolute top-0 right-0 p-2">
+    <FaExternalLinkAlt /> {/* FontAwesome Icon */}
+  </a>
       <a target="_blank" href='https://www.udemy.com/course/the-web-developer-bootcamp/'>
-        <h3 className="text-xl font-bold underline">The Web Developer Bootcamp</h3>
+        <h3 className="text-xl font-bold hover:underline">The Web Developer Bootcamp</h3>
       
         <b>September 2020 - February 2021</b>
         <br></br>
@@ -89,20 +93,22 @@ const About = () => {
         <h3 className="text-xl font-bold">General Member at John Fraser Computer Science Club</h3>
         <b>September 2021 - June 2023</b>
         <br></br>
-        <p>I started in the computer science club as sa general member, 
+        <p>I started my first 2 years in the computer science club as a general member, 
           attending weekly meetings and expanding my knowledge of computer science from competitive programming to machine learning. </p>
       </div>
     
-      <div className="hobby-box bg-gradient-to-r from-blue-500 to-teal-500 rounded-lg p-4 shadow-lg hover:translate-y-[-7px] transition-transform duration-300">
-      <a target="_blank" href='https://www.udemy.com/course/100-days-of-code/'>
-        <h3 className="text-xl font-bold underline">
-100 Days of Code: The Complete Python Pro Bootcamp for 2023
-</h3>
-
-        <b>September 2020 - February 2021</b>
-        <br></br>
+     
+<div className="hobby-box bg-gradient-to-r from-green-600 to-lime-600 rounded-lg p-4 shadow-lg hover:translate-y-[-7px] transition-transform duration-300 relative">
+  <a href="https://www.udemy.com/course/100-days-of-code/" target="_blank" className="absolute top-0 right-0 p-2">
+    <FaExternalLinkAlt /> {/* FontAwesome Icon */}
+  </a>
+  <h3 className="text-xl font-bold hover:underline">
+  <a href="https://www.udemy.com/course/100-days-of-code/" target="_blank"> 100 Days of Code: The Complete Python Pro Bootcamp for 2023</a>
+  </h3>
+  <b>September 2020 - February 2021</b>
+  <br></br>
         <p>This bootcamp gave me the set of skills needed for backend development in applications. </p>
-        </a>
+   
       </div>
     
     </div>

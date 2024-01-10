@@ -7,14 +7,18 @@ const Projects=()=>{
         { title: 'Relief Exchange', description: 'Designed to alleviate poverty, this platform provides a connection for donors and those in need. It facilitates an impactful exchange of recourses, easily reaching the underprivileged and those willing to help. I worked on both the backend and frontend, utilizing Golang, Next.js and Firebase. ', imageUrl: '/relief-ex.png' ,link:"https://reliefexchange.aritrosaha.ca/"},
         { title: 'Grade Genius', description: 'A comprehensive course manager app utilizing Flask, SQl and Javascript. Allows students to track course assessments, grades, goals, study times and notes. ', imageUrl: '/grade-genius.png' ,link:'https://gradegenius.joshuachou.com'},
         { title: 'Learn Chemistry-Brookedge Academy', description: "An interactive app developed for Brookedge Academy. I was awarded the volunteer of the year award by the Academy for the development of this app.  Complete with quizzes and lessons. Posted on Brookedge Academy's main website, and used in the Young Chemists Workshop. ", imageUrl: '/chem.png' ,link:'https://learn-chemistry.joshuac16.repl.co/'},
-    
+
       ];
     return(<>
      <Head>
         <title>Projects | Joshua Chou</title>
       </Head>
       <Navbar />
+     
      <div className="flex flex-col w-full">
+
+     <h1 className="text-4xl font-bold text-center m-5">Projects</h1>
+  <h4 className="text-center">Projects I've developed over the years.</h4>
      <section className="w-full">
 
   {projects.map((project, index) => (
