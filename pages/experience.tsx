@@ -20,7 +20,7 @@ const Experience = () => {
 
                 {/* Experience Item 1 */}
                
-                <div className="relative leading-8">
+                <div className="relative leading-7">
                   <div className="absolute -left-3 mt-1.5 w-6 h-6 bg-blue-500 rounded-full border-4 border-gray-900"></div>
                   <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
                   <Image 
@@ -33,21 +33,22 @@ const Experience = () => {
                   <h3 className="text-xl font-semibold">Lead Web Developer - Learn Chemistry</h3>
                     
                     <p className=" font-semibold">Brookedge Academy</p>
-                    <time className="block text-sm font-normal leading-none text-gray-400">November 2021 - Present</time>
+                    <time className="block text-sm font-normal leading-none text-gray-400 mt-1">December 2021 - Febuary 2022</time>
                     <ul className="list-disc ml-5 mt-4 mb-4 text-gray-300">
                       <li>Led the Development of the Learn Chemistry App</li>
-                      <li>Led a team of developers to implement innovative software solutions.</li>
-                      <li>Managed cross-functional teams to align technology with strategic goals.</li>
-                      <li>Ensured security compliance and data protection measures were upheld.</li>
+                      <li>Allowed over 100 students to prepare for assessments with integrated quizzes and lesson pages</li>
+                      <li>Used to lead Brookedge Academy workshops such as the "Young Chemists" workshop</li>
+                      <li>Posted on Brookedge Academy main website</li>
+                      
                     </ul>
                   
                   </div>
                 </div>
-                <div className="relative">
+                <div className="relative leading-7">
                   <div className="absolute -left-3 mt-1.5 w-6 h-6 bg-blue-500 rounded-full border-4 border-gray-900"></div>
                   <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
                   <Image 
-              src='/cahighschools-logo.png'
+              src='/chs-logo.png'
               alt='Canadian High Schools'
               width={100}  // Adjust the width as needed
               height={25} // Adjust the height as needed
@@ -55,9 +56,9 @@ const Experience = () => {
             />
                     <h3 className="text-xl font-semibold">Director of IT</h3>
                     <p className=" font-semibold">Canadian High Schools</p>
-                    <time className="block text-sm font-normal leading-none text-gray-400">November 2021 - Present</time>
+                    <time className="block text-sm font-normal leading-none text-gray-400 mt-1">July 2023 - Present</time>
                     <ul className="list-disc ml-5 mt-4 mb-4 text-gray-300">
-                      <li>Engineered the application using Python-Flask, SQLalchemy, and Javascript </li>
+                      <li>Managed cross-functional teams to align technology with strategic goals.</li>
                       <li>Led a team of developers to implement innovative software solutions.</li>
                       <li>Managed cross-functional teams to align technology with strategic goals.</li>
                       <li>Ensured security compliance and data protection measures were upheld.</li>
@@ -65,7 +66,7 @@ const Experience = () => {
                   
                   </div>
                 </div>
-                <div className="relative">
+                <div className="relative leading-7">
                   <div className="absolute -left-3 mt-1.5 w-6 h-6 bg-blue-500 rounded-full border-4 border-gray-900"></div>
                   <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
                   <Image 
@@ -76,28 +77,28 @@ const Experience = () => {
               className="mb-4"
             />
                   <h3 className="text-xl font-semibold">Full Stack Developer</h3>
-                  <p className=" font-semibold">Grade Genius</p>
-                    <ul className="list-disc ml-5 mt-4 mb-4 text-gray-300">
-                      <li>Overhauled IT infrastructure, resulting in a 20% increase in efficiency.</li>
-                      <li>Led a team of developers to implement innovative software solutions.</li>
-                      <li>Managed cross-functional teams to align technology with strategic goals.</li>
-                      <li>Ensured security compliance and data protection measures were upheld.</li>
+                  <p className="font-semibold">Grade Genius</p>
+                  <time className="block text-sm font-normal leading-none text-gray-400 mt-1">September 2023- January 2023</time>
+                    <ul className="list-disc ml-5 mt-4 mb-4 text-gray-300">         
+                      <li>Developed a contemporary, sleek course management web application</li>
+                      <li>Utilized Python Flask, SQLalchemy, Javascript and Django </li>
+                      <li>Automates the calculation of grades for high school students around canada, enhancing educational efficiency </li>
                     </ul>
-                    <time className="block text-sm font-normal leading-none text-gray-400">November 2021 - Present</time>
+                   
                   </div>
                 </div>
-                <div className="relative">
+                <div className="relative leading-7">
                   <div className="absolute -left-3 mt-1.5 w-6 h-6 bg-blue-500 rounded-full border-4 border-gray-900"></div>
                   <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-                  <h3 className="text-xl font-semibold">Full Stack Developer</h3>
-                    <p className="text-gray-400">Grade Genius</p>
+                  <h3 className="text-xl font-semibold">Backend Developer</h3>
+                    <p className="text-gray-400">Relief Exchange</p>
                     <ul className="list-disc ml-5 mt-4 mb-4 text-gray-300">
-                      <li>Overhauled IT infrastructure, resulting in a 20% increase in efficiency.</li>
-                      <li>Led a team of developers to implement innovative software solutions.</li>
-                      <li>Managed cross-functional teams to align technology with strategic goals.</li>
-                      <li>Ensured security compliance and data protection measures were upheld.</li>
+                      <li>Worked closley with a group of 3 developers</li>
+                      <li>Automates the transfer of donations</li>
+                      <li>Utilized Golang and Firebase; integrated with Next.js frontend architecture </li>
+                      
                     </ul>
-                    <time className="block text-sm font-normal leading-none text-gray-400">November 2021 - Present</time>
+                    <time className="block text-sm font-normal leading-none text-gray-400 mt-1">November 2021 - Present</time>
                   </div>
                 </div>
 

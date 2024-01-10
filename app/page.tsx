@@ -20,7 +20,7 @@ const Home = () => {
       link: '/projects',
     },
     {
-      title: 'My Experiences',
+      title: 'Experience',
       description: 'Learn about my professional journey and the experiences that have shaped my career.',
       link: '/experiences',
     },

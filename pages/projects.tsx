@@ -18,7 +18,7 @@ const Projects=()=>{
      <div className="flex flex-col w-full">
 
      <h1 className="text-4xl font-bold text-center m-5">Projects</h1>
-  <h4 className="text-center">Projects I've developed over the years.</h4>
+  <h4 className="text-center">My biggest projects developed over the years</h4>
      <section className="w-full">
 
   {projects.map((project, index) => (
