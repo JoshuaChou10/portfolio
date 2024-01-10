@@ -20,30 +20,7 @@ const Experience = () => {
 
                 {/* Experience Item 1 */}
                
-                <div className="relative leading-7">
-                  <div className="absolute -left-3 mt-1.5 w-6 h-6 bg-blue-500 rounded-full border-4 border-gray-900"></div>
-                  <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-                  <Image 
-              src='/brookedge-logo.png'
-              alt='Brookedge Academy'
-              width={100}  // Adjust the width as needed
-              height={25} // Adjust the height as needed
-              className="mb-4"
-            />
-                  <h3 className="text-xl font-semibold">Lead Web Developer - Learn Chemistry</h3>
-                    
-                    <p className=" font-semibold">Brookedge Academy</p>
-                    <time className="block text-sm font-normal leading-none text-gray-400 mt-1">December 2021 - Febuary 2022</time>
-                    <ul className="list-disc ml-5 mt-4 mb-4 text-gray-300">
-                      <li>Led the Development of the Learn Chemistry App</li>
-                      <li>Allowed over 100 students to prepare for assessments with integrated quizzes and lesson pages</li>
-                      <li>Used to lead Brookedge Academy workshops such as the "Young Chemists" workshop</li>
-                      <li>Posted on Brookedge Academy main website</li>
-                      
-                    </ul>
-                  
-                  </div>
-                </div>
+                
                 <div className="relative leading-7">
                   <div className="absolute -left-3 mt-1.5 w-6 h-6 bg-blue-500 rounded-full border-4 border-gray-900"></div>
                   <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
@@ -70,6 +47,28 @@ const Experience = () => {
                   <div className="absolute -left-3 mt-1.5 w-6 h-6 bg-blue-500 rounded-full border-4 border-gray-900"></div>
                   <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
                   <Image 
+              src='/chs-logo.png'
+              alt='Canadian High Schools'
+              width={100}  // Adjust the width as needed
+              height={25} // Adjust the height as needed
+              className="mb-4"
+            />
+                    <h3 className="text-xl font-semibold">Coding Tutor</h3>
+                    <p className=" font-semibold">Superprof</p>
+                    <time className="block text-sm font-normal leading-none text-gray-400 mt-1">August 2022 - Present</time>
+                    <ul className="list-disc ml-5 mt-4 mb-4 text-gray-300">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  
+                  </div>
+                </div>
+                <div className="relative leading-7">
+                  <div className="absolute -left-3 mt-1.5 w-6 h-6 bg-blue-500 rounded-full border-4 border-gray-900"></div>
+                  <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+                  <Image 
               src='/grade-genius-logo.png'
               alt='Grade Genius'
               width={100}  // Adjust the width as needed
@@ -87,6 +86,34 @@ const Experience = () => {
                    
                   </div>
                 </div>
+                <div className="relative leading-7">
+                  <div className="absolute -left-3 mt-1.5 w-6 h-6 bg-blue-500 rounded-full border-4 border-gray-900"></div>
+                  <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+                  <Image 
+              src='/brookedge-logo.png'
+              alt='Brookedge Academy'
+              width={100}  // Adjust the width as needed
+              height={25} // Adjust the height as needed
+              className="mb-4"
+            />
+                  <h3 className="text-xl font-semibold">Lead Web Developer - Learn Chemistry</h3>
+                    
+                    <p className=" font-semibold">Brookedge Academy</p>
+                    <time className="block text-sm font-normal leading-none text-gray-400 mt-1">December 2021 - Febuary 2022</time>
+                    <ul className="list-disc ml-5 mt-4 mb-4 text-gray-300">
+                      <li>Led the Development of the Learn Chemistry App</li>
+                      <li>Allowed over 100 students to prepare for assessments with integrated quizzes and lesson pages</li>
+                      <li>Used to lead Brookedge Academy workshops such as the "Young Chemists" workshop</li>
+                      <li>Posted on Brookedge Academy main website</li>
+                      
+                    </ul>
+                  
+                  </div>
+                </div>
+                
+
+
+
                 <div className="relative leading-7">
                   <div className="absolute -left-3 mt-1.5 w-6 h-6 bg-blue-500 rounded-full border-4 border-gray-900"></div>
                   <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
