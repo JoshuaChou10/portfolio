@@ -103,7 +103,7 @@ const Experience = () => {
                     <ul className="list-disc ml-5 mt-4 mb-4 text-gray-300">
                       <li>Led the Development of the Learn Chemistry App</li>
                       <li>Allowed over 100 students to prepare for assessments with integrated quizzes and lesson pages</li>
-                      <li>Used to lead Brookedge Academy workshops such as the "Young Chemists" workshop</li>
+                      <li>Used to lead Brookedge Academy workshops such as the Young Chemists workshop</li>
                       <li>Posted on Brookedge Academy main website</li>
                       
                     </ul>

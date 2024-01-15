@@ -49,8 +49,7 @@ const Home = () => {
       <main className="flex flex-col items-center w-full px-20 text-center mt-8">
       <div className={`flex flex-col items-center ${animate ? styles.startSlideRight : ''}`}>
   <h1 className="text-blue-600 text-4xl md:text-9xl font-bold">Joshua</h1>
-  <
-h2 className="text-blue-600 text-4xl md:text-9xl font-bold">Chou</h2>
+  <h2 className="text-blue-600 text-4xl md:text-9xl font-bold">Chou</h2>
 
 </div>
       <br /><br /><br />

@@ -26,11 +26,11 @@ const About = () => {
         </div>
         {/* Description section */}
         <div className="md:w-2/3 text-center md:text-left">
-          <h1 className="text-4xl font-bold">Hi,  I'm Joshua.</h1>
+          <h1 className="text-4xl font-bold">Hi,  I&apos;m Joshua.</h1>
           <p className="mt-2 text-lg">
             {/* Add your description here */}
-           I'm a high school student and a software developer in Ontario. <br></br>As a programmer I have always enjoyed watching the logic flow into code. 
-           I aim to create programs that will benefit others, whether that's by creating educational applications, or developing tools that simplify life and improve efficiency. 
+           I&apos;m a high school student and a software developer in Ontario. <br></br>As a programmer I have always enjoyed watching the logic flow into code. 
+           I aim to create programs that will benefit others, whether that&apos;s by creating educational applications, or developing tools that simplify life and improve efficiency. 
           </p>
         </div>
       </main>
@@ -45,7 +45,7 @@ const About = () => {
       </div>
       <div className="hobby-box bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg p-4 shadow-lg">
         <h3 className="text-xl font-bold">Meditating</h3>
-        <p>I have been meditating daily for 5 years. It's a way for things to settle down. I always feel much lighter and clearer afterwards. </p>
+        <p>I have been meditating daily for 5 years. It&apos;s a way for things to settle down. I always feel much lighter and clearer afterwards. </p>
       </div>
       <div className="hobby-box bg-gradient-to-r from-purple-500 to-indigo-400 rounded-lg p-4 shadow-lg">
         <h3 className="text-xl font-bold">Playing Piano</h3>
