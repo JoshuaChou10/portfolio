@@ -35,9 +35,9 @@ const Experience = () => {
                     <p className=" font-semibold">Canadian High Schools</p>
                     <time className="block text-sm font-normal leading-none text-gray-400 mt-1">July 2023 - Present</time>
                     <ul className="list-disc ml-5 mt-4 mb-4 text-gray-300">
+                      <li>Co-founded the organization where high school students can post information to wiki and earn volunteer hours</li>
                       <li>Managed cross-functional teams to align technology with strategic goals.</li>
-                      <li>Led a team of developers to implement innovative software solutions.</li>
-                      <li>Managed cross-functional teams to align technology with strategic goals.</li>
+                      <li>Led a team of developers to implement innovative software solutions.</li>         
                       <li>Ensured security compliance and data protection measures were upheld.</li>
                     </ul>
                   
@@ -47,7 +47,7 @@ const Experience = () => {
                   <div className="absolute -left-3 mt-1.5 w-6 h-6 bg-blue-500 rounded-full border-4 border-gray-900"></div>
                   <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
                   <Image 
-              src='/chs-logo.png'
+              src='/superprof.png'
               alt='Canadian High Schools'
               width={100}  // Adjust the width as needed
               height={25} // Adjust the height as needed
@@ -57,10 +57,10 @@ const Experience = () => {
                     <p className=" font-semibold">Superprof</p>
                     <time className="block text-sm font-normal leading-none text-gray-400 mt-1">August 2022 - Present</time>
                     <ul className="list-disc ml-5 mt-4 mb-4 text-gray-300">
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
+                      <li>Provide personalized assistance to college and coding bootcamp students with their assignments.</li>
+                      <li>Ensure students understand the coding mechanism </li>
+                      <li>Taught Python, Javascript, React, Java, HTML and CSS</li>
+                 
                     </ul>
                   
                   </div>
@@ -114,21 +114,7 @@ const Experience = () => {
 
 
 
-                <div className="relative leading-7">
-                  <div className="absolute -left-3 mt-1.5 w-6 h-6 bg-blue-500 rounded-full border-4 border-gray-900"></div>
-                  <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-                  <h3 className="text-xl font-semibold">Backend Developer</h3>
-                    <p className="text-gray-400">Relief Exchange</p>
-                    <ul className="list-disc ml-5 mt-4 mb-4 text-gray-300">
-                      <li>Worked closley with a group of 3 developers</li>
-                      <li>Automates the transfer of donations</li>
-                      <li>Utilized Golang and Firebase; integrated with Next.js frontend architecture </li>
-                      
-                    </ul>
-                    <time className="block text-sm font-normal leading-none text-gray-400 mt-1">November 2021 - Present</time>
-                  </div>
-                </div>
-
+               
               
                 
               </div>

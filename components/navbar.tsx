@@ -16,7 +16,7 @@ const Navbar = () => {
           <Link href="/skills" legacyBehavior><a className="text-gray-300 hover:text-white">Skills and Awards</a></Link>
        
         </div>
-        <Link href="/contact" legacyBehavior>
+        <Link href="mailto:joshuachou912@gmail.com" legacyBehavior>
           <a className="text-gray-900 bg-white px-6 py-2 rounded-md hover:bg-blue-700 hover:text-white">
             Contact Me
           </a>
