@@ -36,9 +36,9 @@ const Experience = () => {
                     <time className="block text-sm font-normal leading-none text-gray-400 mt-1">July 2023 - Present</time>
                     <ul className="list-disc ml-5 mt-4 mb-4 text-gray-300">
                       <li>Co-founded the organization where high school students can post information to wiki and earn volunteer hours</li>
-                      <li>Managed cross-functional teams to align technology with strategic goals.</li>
-                      <li>Led a team of developers to implement innovative software solutions.</li>         
-                      <li>Ensured security compliance and data protection measures were upheld.</li>
+                      <li>Managed cross-functional teams to align technology with strategic goals</li>
+                      <li>Led a team of developers to implement innovative software solutions</li>         
+                      <li>Ensured security compliance and data protection measures were upheld</li>
                     </ul>
                   
                   </div>

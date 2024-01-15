@@ -7,6 +7,7 @@ const Skills = () => {
   function toggleReadMore() {
     const description = document.getElementById('description');
     const btn=document.querySelector("#read")
+    if (description && btn){
     if (description.classList.contains('max-h-24')) {
       description.classList.remove('max-h-24');
       description.classList.add('max-h-full');
@@ -18,7 +19,7 @@ const Skills = () => {
       btn.innerHTML="Read More"
     }
   }
-  
+  }
   return (
     <>
       <Head>
@@ -75,5 +76,7 @@ const Skills = () => {
       </section>
     </>
   )
+
+  
 }
 export default Skills;
