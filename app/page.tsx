@@ -4,6 +4,7 @@ import Head from "next/head";
 import {useState } from 'react';
 import Navbar from '../components/navbar';
 import styles from '../styles.module.css'; 
+import Image from 'next/image';
 //relief exchange github
 // https://github.com/AritroSaha10/ReliefExchange-ICS4U/tree/ce97ac9770ed0dded6ecdace65ab861707565b3e
 const Home = () => {
@@ -47,9 +48,11 @@ const Home = () => {
       {/* Adjust the top margin to move the content up */}
       <main className="flex flex-col items-center w-full px-20 text-center mt-8">
       <div className={`flex flex-col items-center ${animate ? styles.startSlideRight : ''}`}>
-        <h1 className="text-blue-600 text-9xl font-bold">Joshua</h1>
-        <h2 className="text-blue-600 text-9xl font-bold">Chou</h2>
-      </div>
+  <h1 className="text-blue-600 text-4xl md:text-9xl font-bold">Joshua</h1>
+  <
+h2 className="text-blue-600 text-4xl md:text-9xl font-bold">Chou</h2>
+
+</div>
       <br /><br /><br />
       <div className={`mt-3 text-2xl ${animate ? styles.startSlideLeft : ''}`}>
         <p className="font-bold">I am a high school student and a<br />
@@ -73,7 +76,7 @@ const Home = () => {
     
     {/* Project Image */}
     <a target='_blank' rel="noopener noreferrer" href={project.link} className="w-full md:w-1/2 hover:translate-y-[-10px] transition-transform duration-300">
-      <img className="w-full h-auto object-cover" src={project.imageUrl} alt={project.title} />
+      <Image  className="w-full h-auto object-cover" src={project.imageUrl} alt={project.title} width={500} height={600} />
     </a>
     
     {/* Project Description */}

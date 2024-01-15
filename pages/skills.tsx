@@ -17,7 +17,8 @@ const Skills = () => {
           <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-10">
 
             {/* Volunteer of The Year Award */}
-            <div className="flex flex-row items-start gap-4 award-box bg-gradient-to-r from-pink-500 to-orange-400 rounded-lg p-4 shadow-lg">
+            <div className="flex flex-col md:flex-row items-start gap-4 award-box bg-gradient-to-r from-pink-500 to-orange-400 rounded-lg p-4 shadow-lg">
+
   <div className="flex-1">
     <h4 className="text-xl font-bold">Volunteer of The Year Award - Brookedge Academy</h4>
     <p>During the covid pandemic, where volunteer opportunities were scarce, I actively sought out ways I could involve myself in the community.
