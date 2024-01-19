@@ -5,6 +5,7 @@ import {useState } from 'react';
 import Navbar from '../components/navbar';
 import styles from '../styles.module.css'; 
 import Image from 'next/image';
+import Footer from '../components/footer'
 //relief exchange github
 // https://github.com/AritroSaha10/ReliefExchange-ICS4U/tree/ce97ac9770ed0dded6ecdace65ab861707565b3e
 const Home = () => {
@@ -93,9 +94,7 @@ const Home = () => {
 ))}
 </section>
 
-<footer className="flex items-center justify-center w-full h-24 ">
-  {/* Footer content */}
-</footer>
+<Footer />
 
     </div>
   )

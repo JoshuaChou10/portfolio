@@ -10,11 +10,12 @@ const Footer = () => {
       <div className="container mx-auto text-center">
         <div className="mb-2">
           <a href="/resume.pdf" className="text-blue-400 hover:text-blue-600 mx-2">
-            <FontAwesomeIcon icon={faFile} /> {/* Resume Icon */}
+            <FontAwesomeIcon icon={faFile} className="w-6 h-6"/> {/* Resume Icon */}
           </a>
           <a href="https://github.com/JoshuaChou10/" target="_blank" className="text-blue-400 hover:text-blue-600 mx-2">
-            <FontAwesomeIcon icon={faGithub} /> {/* GitHub Icon */}
+            <FontAwesomeIcon icon={faGithub} className="w-6 h-6"/> {/* GitHub Icon */}
           </a>
+          
         </div>
         <div>
           <p>© {new Date().getFullYear()} Joshua Chou. All rights reserved.</p>

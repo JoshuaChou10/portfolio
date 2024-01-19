@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 import Navbar from '../components/navbar';
 import '../app/globals.css';
-
+import Footer from '../components/footer'
 const Skills = () => {
   function toggleReadMore() {
     const description = document.getElementById('description');
@@ -74,6 +74,7 @@ const Skills = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   )
 

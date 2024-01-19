@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Navbar from '../components/navbar';
 import '../app/globals.css'
 import { FaExternalLinkAlt } from 'react-icons/fa'
+import Footer from '../components/footer'
 const About = () => {
   return (
     <>
@@ -114,7 +115,7 @@ const About = () => {
     </div>
   </div>
 </section>
-
+<Footer />
     </>
   );
   
