@@ -16,7 +16,6 @@ const Home = () => {
     { title: 'Relief Exchange', description: 'Designed to alleviate poverty, this platform provides a connection for donors and those in need. It facilitates an impactful exchange of recourses, easily reaching the underprivileged and those willing to help. I worked on both the backend and frontend, utilizing Golang, Next.js and Firebase. ', imageUrl: '/relief-ex.png' ,link:"https://reliefexchange.aritrosaha.ca/"},
     { title: 'Grade Genius', description: 'A comprehensive course manager app utilizing Flask, SQl and Javascript. This application allows students to track course assessments, grades, goals, study times and notes. ', imageUrl: '/grade-genius.png' ,link:'https://gradegenius.joshuachou.com'},
     { title: 'Learn Chemistry-Brookedge Academy', description: "An interactive app developed for Brookedge Academy. I was awarded the volunteer of the year award by the Academy for the development of this app. It was posted on Brookedge Academy's main website. The interactive quizzes and features were used in the Young Chemists Workshop I led. ", imageUrl: '/chem.png' ,link:'https://learn-chemistry.joshuac16.repl.co/'},
-    { title: 'Data Mangement Exam Review', description: "An example of how computer science can be applied for practical purposes. This was developed before an exam and helped many students prepare for the upcoming assessment. ", imageUrl: '/data.png' ,link:'https://data-mangment-exam-review.vercel.app/'},
 
   ];
   // const sections = [
