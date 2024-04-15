@@ -12,7 +12,7 @@ const About = () => {
       </Head>
       <Navbar />
   
-      <main className="flex flex-col md:flex-row md:justify-center md:items-center md:space-x-6 my-12 mx-auto px-20">
+      <main className="flex flex-col md:flex-row md:justify-center md:items-center md:space-x-6 my-12 mx-auto px-20 pt-20 lg:pt-24">
 
         {/* Image section */}
         <div className="md:w-1/3 flex justify-center mb-6 md:mb-0">

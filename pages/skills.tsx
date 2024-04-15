@@ -27,7 +27,7 @@ const Skills = () => {
       </Head>
       <Navbar />
 
-      <section className="py-6">
+      <section className="py-6 pt-20 lg:pt-24">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center">Skills and Awards</h2>
           <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-10">

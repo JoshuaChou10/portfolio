@@ -6,6 +6,7 @@ import Navbar from '../components/navbar';
 import styles from '../styles.module.css'; 
 import Image from 'next/image';
 import Footer from '../components/footer'
+import { setDefaultAutoSelectFamily } from "net";
 //relief exchange github
 // https://github.com/AritroSaha10/ReliefExchange-ICS4U/tree/ce97ac9770ed0dded6ecdace65ab861707565b3e
 const Home = () => {
@@ -16,7 +17,6 @@ const Home = () => {
     { title: 'Grade Genius', description: 'A comprehensive course manager app utilizing Flask, SQl and Javascript. This application allows students to track course assessments, grades, goals, study times and notes. ', imageUrl: '/grade-genius.png' ,link:'https://gradegenius.joshuachou.com'},
     { title: 'Learn Chemistry-Brookedge Academy', description: "An interactive app developed for Brookedge Academy. I was awarded the volunteer of the year award by the Academy for the development of this app. It was posted on Brookedge Academy's main website. The interactive quizzes and features were used in the Young Chemists Workshop I led. ", imageUrl: '/chem.png' ,link:'https://learn-chemistry.joshuac16.repl.co/'},
     { title: 'Data Mangement Exam Review', description: "An example of how computer science can be applied for practical purposes. This was developed before an exam and helped many students prepare for the upcoming assessment. ", imageUrl: '/data.png' ,link:'https://data-mangment-exam-review.vercel.app/'},
-
 
   ];
   // const sections = [
@@ -42,7 +42,7 @@ const Home = () => {
   //   },
   // ];
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full pt-20 lg:pt-24">
       <Navbar />
       <Head>
         <title>Joshua Chou | Software Developer</title>
