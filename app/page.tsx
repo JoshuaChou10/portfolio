@@ -17,7 +17,7 @@ const Home = () => {
     { title: 'Relief Exchange', description: 'Designed to alleviate poverty, this platform provides a connection for donors and those in need. It facilitates an impactful exchange of recourses, easily reaching the underprivileged and those willing to help. I worked on both the backend and frontend, utilizing Golang, Next.js and Firebase. ', imageUrl: '/relief-ex.png' ,link:"https://reliefexchange.aritrosaha.ca/"},
     { title: 'Learn Chemistry-Brookedge Academy', description: "An interactive app developed for Brookedge Academy. I received the Volunteer of the Year award for the development of this app. It was posted on Brookedge Academy's main website. The interactive quizzes and features were used in the Young Chemists Workshop I led. ", imageUrl: '/chem.png' ,link:'https://b1358921-2679-4540-ad80-6ce226ec2015-00-2pblzev010xm4.riker.replit.dev/'},
     { title: 'Fraser Hacks', description: "The website for John Fraser Secondary Schools official hackathon, I was ressponsible for the animations and hackathon description.", imageUrl: '/hacks.png' ,link:'https://www.fraserhacks.ca/'},
-
+    { title: 'Tracker', description: 'It has been proven that it is easier to build habits than to break them. This application acts as a progress tracker for anyone looking to set goals and improve their daily lives. ', imageUrl: '/tracker.png' ,link:'https://tracker-six-orpin.vercel.app/'},
     { title: 'Grade Genius', description: 'A comprehensive course manager app utilizing Flask, SQl and Javascript. This application allows students to track course assessments, grades, goals, study times and notes. ', imageUrl: '/grade-genius.png' ,link:'https://gradegenius.joshuachou.com'},
 
   ];
@@ -59,7 +59,7 @@ const Home = () => {
 </div>
       <br /><br /><br />
       <div className={`mt-3 text-2xl ${animate ? styles.startSlideLeft : ''}`}>
-        <p className="font-bold">I am a high school student and a<br />
+        <p className="font-bold">I am a Computer Science student at the University of Toronto and a<br />
           <span className="text-blue-600">software developer</span>
         </p>
       </div>

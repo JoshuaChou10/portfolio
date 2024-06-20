@@ -30,8 +30,8 @@ const About = () => {
           <h1 className="text-4xl font-bold">Hi,  I&apos;m Joshua.</h1>
           <p className="mt-2 text-lg">
             {/* Add your description here */}
-           I&apos;m a high school student and a software developer in Ontario. <br></br>As a programmer I have always enjoyed watching the logic flow into code. 
-           I aim to create programs that will benefit others, whether that&apos;s by creating educational applications, or developing tools that simplify life and improve efficiency. 
+           I&apos;m a computer science student at the University of Toronto and a software developer. <br></br>As a programmer I have always enjoyed watching the logic flow into code. 
+           I aim to create programs that will benefit others, whether that&apos;s by creating educational applications, or developing tools that simplify everyday life and improve efficiency. 
           </p>
         </div>
       </main>
