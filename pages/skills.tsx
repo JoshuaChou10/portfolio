@@ -52,14 +52,26 @@ const Skills = () => {
 </div>
 
             {/* Coding Skill */}
-            <div className="skill-box bg-gradient-to-r from-blue-500 to-teal-400 rounded-lg p-4 shadow-lg">
-              <h4 className="text-xl font-bold">Coding</h4>
-              <p >I have more than 5 years of coding experience and have worked individually or with other developers to create projects such as Relief Exchange, Grade Genius, Learn Chemistry and Cahighschools.org.
-               I have experience in Javascript, React, Nextjs, Node, Python, Golang, and Java. </p>
-            </div>
+            <div className="skill-box bg-gradient-to-r from-blue-400 to-teal-400 rounded-lg p-4 shadow-lg">
+  <h4 className="text-xl font-bold">Coding</h4>
+  <p>
+    I have more than 5 years of coding experience and have worked individually and with other developers to create projects such as Relief Exchange, Grade Genius, Learn Chemistry, and Cahighschools.org.
+  </p>
+  <p>Technologies I have experience with include:</p>
+  <ul className="list-disc ml-5 mt-2">
+    <li>JavaScript</li>
+    <li>React</li>
+    <li>Next.js</li>
+    <li>Node.js</li>
+    <li>Python</li>
+    <li>Golang</li>
+    <li>Java</li>
+  </ul>
+</div>
+
 
             {/* Fermat Contest Award */}
-            <div className=" award-box bg-gradient-to-t from-[#a67c00] via-[#ca9f06] to-[#fed700] rounded-lg p-8 shadow-lg">
+            <div className="award-box bg-gradient-to-t from-[#8a6700] via-[#ca9f06] to-[#fed700] rounded-lg p-8 shadow-lg">
               <h4 className="text-xl font-bold">Certificate of Distinction-Fermat Contest 2023</h4>
               <p>I achieved a certificate of distinction in the Universty of Waterloo Fermat contest, reserved for the top 25% of competitors. This international contest focuses on logical thinking and problem solving rather than curriculum content.  </p>
               <Image src="/fermat.png" alt="Fermat Contest Award" width={500} height={300} />

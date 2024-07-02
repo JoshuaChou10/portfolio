@@ -18,11 +18,35 @@ const Experience = () => {
               {/* Experience Block */}
               <div className="space-y-10"> {/* This wrapper introduces space between the items */}
 
+              <div className="relative leading-7">
+              <div className="absolute -left-3 mt-1.5 w-6 h-6 bg-blue-500 rounded-full border-4 border-gray-900"></div>
+
+              <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+                  <Image 
+              src='/hacks.png'
+              alt='Fraser Hacks'
+              width={150}  // Adjust the width as needed
+              height={40} // Adjust the height as needed
+              className="mb-4"
+            />
+                    <h3 className="text-xl font-semibold">Web Developer</h3>
+                    <p className=" font-semibold">FraserHacks</p>
+                    <time className="block text-sm font-normal leading-none text-gray-400 mt-1">Febuary 2024 - Present</time>
+                    <ul className="list-disc ml-5 mt-4 mb-4 text-gray-300">
+                      <li>Collaborated with a team of developers to create the official Hackathon website</li>
+                      <li>Enabled hundreds of participants to register for the FraserHacks Hackathon</li>
+                      <li>Utilized Next.js to implement dynamic animations</li>         
+                    </ul>
+                  
+                  </div>
+                  </div>
                 {/* Experience Item 1 */}
                
                 
                 <div className="relative leading-7">
+              
                   <div className="absolute -left-3 mt-1.5 w-6 h-6 bg-blue-500 rounded-full border-4 border-gray-900"></div>
+                 
                   <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
                   <Image 
               src='/chs-logo.png'
@@ -48,7 +72,7 @@ const Experience = () => {
                   <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
                   <Image 
               src='/superprof.png'
-              alt='Canadian High Schools'
+              alt='Superprof'
               width={100}  // Adjust the width as needed
               height={25} // Adjust the height as needed
               className="mb-4"
