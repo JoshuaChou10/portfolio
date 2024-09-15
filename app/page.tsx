@@ -12,7 +12,7 @@ import { setDefaultAutoSelectFamily } from "net";
 const Home = () => {
   const [animate] = useState(true);
   const projects = [
-    { title: 'Fraser Hacks', description: "John Fraser Secondary School&apos;s official hackathon website. I was responsible for the animations and hackathon description.", imageUrl: '/hacks.png' ,link:'https://www.fraserhacks.ca/'},
+    { title: 'Fraser Hacks', description: "John Fraser Secondary School's official hackathon website. I was responsible for the animations and hackathon description.", imageUrl: '/hacks.png' ,link:'https://www.fraserhacks.ca/'},
     {title:'Scholar', description: 'A streamlined school and course manager that allows students to take notes, set reminders, save important links, keep track of their schedule, the weather and any upcoming assessments', imageUrl: '/scholar.png' ,link:"https://scholar-j.vercel.app/"},
     { title: 'Relief Exchange', description: 'Designed to alleviate poverty, this platform provides a connection for donors and those in need. It facilitates an impactful exchange of resources, easily reaching the underprivileged and those willing to help. I worked on both the backend and frontend, utilizing Golang, Next.js and Firebase. ', imageUrl: '/relief-ex.png' ,link:"https://reliefexchange.aritrosaha.ca/"},
     { title: 'Mindfulness and Meditation', description: 'An application for anyone interested in starting meditation practice. Includes a mindfulness course, meditation timer and calendar.', imageUrl: '/mindfulness.png' ,link:"https://mindfulness-eight.vercel.app/"},
