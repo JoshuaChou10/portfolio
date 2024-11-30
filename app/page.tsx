@@ -12,6 +12,8 @@ import { setDefaultAutoSelectFamily } from "net";
 const Home = () => {
   const [animate] = useState(true);
   const projects = [
+    //put certificae 
+    { title: 'Solar Index Map: Mississauga Open Data Hackathon 4th place overall', description: "A website with an interactive heatmap using open data to design a solar index map for evaluating solar energy potential. This project was created in the Mississauga Open Data Hackathon and won 4th place overall. I worked on the frontend using leaflet.js and heatmap.js", imageUrl: '/solar.png' ,link:'https://opendata-hackathon-2024-mississauga.hub.arcgis.com/'},
     { title: 'Fraser Hacks', description: "John Fraser Secondary School's official hackathon website. I was responsible for the animations and hackathon description.", imageUrl: '/hacks.png' ,link:'https://www.fraserhacks.ca/'},
     { title: 'Grade Genius', description: 'A comprehensive course manager app utilizing Flask, SQL and JavaScript. This application allows students to track course assessments, grades, goals, study times and notes. ', imageUrl: '/grade-genius.png' ,link:'https://gradegenius.joshuachou.com'},
     {title:'Scholar', description: 'A streamlined school and course manager that allows students to take notes, set reminders, save important links, keep track of their schedule, the weather and any upcoming assessments', imageUrl: '/scholar.png' ,link:"https://scholar-j.vercel.app/"},
