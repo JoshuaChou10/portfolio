@@ -36,7 +36,7 @@ const Skills = () => {
              <div className="award-box bg-gradient-to-t from-[#8a6700] via-[#ca9f06] to-[#fed700] rounded-lg p-8 shadow-lg">
               <h4 className="text-xl font-bold">4th Place Overall - Mississauga Open Data Hackathon</h4>
               <p>
-                Alongside my team, I leveraged open data sets provided by the city of Mississauga to develop an innovative solution. 
+                Alongside my team, I utilized open data sets provided by the city of Mississauga to develop a solar-index heatmap to visually represent solar energy potential in the city. 
                 We secured 4th place overall, demonstrating strong teamwork, data analysis, and problem-solving skills.
               </p>
               <Image src="/hack.png" alt="Mississauga Open Data Hackathon Award" width={500} height={300} />
