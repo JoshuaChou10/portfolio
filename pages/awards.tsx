@@ -38,8 +38,8 @@ const Skills = () => {
           <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-10">
              {/* Mississauga Open Data Hackathon Award */}
              <div className="award-box bg-gradient-to-t from-[#8a6700] via-[#ca9f06] to-[#fed700] rounded-lg p-8 shadow-lg">
-              <h4 className="text-xl font-bold">4th Place Overall - Mississauga Open Data Hackathon</h4>
-              <p>
+              <h4 className="text-xl font-bold text-black">4th Place Overall - Mississauga Open Data Hackathon</h4>
+              <p className="text-black">
                 Alongside my team, I utilized open data sets provided by the city of Mississauga to develop a solar-index heatmap to visually represent solar energy potential in the city. 
                 We secured 4th place overall, demonstrating strong teamwork, data analysis, and problem-solving skills.
               </p>
@@ -48,8 +48,8 @@ const Skills = () => {
             {/* Volunteer of The Year Award */}
             <div className="flex flex-col md:flex-row items-start gap-4 award-box bg-gradient-to-t from-[#a67c00] via-[#ca9f06] to-[#fed700] rounded-lg p-8 shadow-lg">
               <div className="flex-1 space-y-4">
-                <h4 className="text-xl font-bold">Volunteer of The Year Award - Brookedge Academy</h4>
-                <p className="text-ellipsis overflow-hidden max-h-24" id="description">
+                <h4 className="text-xl font-bold text-black">Volunteer of The Year Award - Brookedge Academy</h4>
+                <p className="text-ellipsis overflow-hidden max-h-24 text-black" id="description">
                   During the covid pandemic, where volunteer opportunities were scarce, I actively sought out ways I could involve myself in the community.
                   After tutoring at Brookedge Academy for over a year, I decided I wanted to get creative. I realized that it was more difficult for students 
                   to learn online, so I created a prototype of the Learn Chemistry app and presented it to the leaders of the organization. I dedicated 
@@ -64,8 +64,8 @@ const Skills = () => {
 
             {/* Fermat Contest Award */}
             <div className="award-box bg-gradient-to-t from-[#8a6700] via-[#ca9f06] to-[#fed700] rounded-lg p-8 shadow-lg">
-              <h4 className="text-xl font-bold">Certificate of Distinction - Fermat Contest 2023</h4>
-              <p>
+              <h4 className="text-xl font-bold text-black">Certificate of Distinction - Fermat Contest 2023</h4>
+              <p className="text-black">
                 I achieved a certificate of distinction in the University of Waterloo Fermat contest, reserved for the top 25% of competitors. 
                 This international contest focuses on logical thinking and problem solving rather than curriculum content.
               </p>
