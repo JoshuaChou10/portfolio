@@ -47,36 +47,49 @@ const Home = () => {
   //   },
   // ];
   return (
-    <div className="flex flex-col w-full pt-20 lg:pt-24">
-      <Navbar />
+    <div className="flex flex-col w-full pt-20 lg:pt-24 ">
+     <div className="bg-[#F95738]"> 
+  
+     
+    <Navbar />
       <Head>
         <title>Joshua Chou | Software Developer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+   
       {/* Adjust the top margin to move the content up */}
-      <main className="flex flex-col items-center w-full px-20 text-center mt-8">
-      <div className={`flex flex-col items-center ${animate ? styles.startSlideRight : ''}`}>
-  <h1 className="text-blue-600 text-4xl md:text-9xl font-bold">Joshua</h1>
-  <h2 className="text-blue-600 text-4xl md:text-9xl font-bold">Chou</h2>
+      <main className="flex flex-col items-center w-full text-center mt-8">
+      <div 
+  className={`flex flex-col items-center justify-center ${animate ? styles.startSlideRight : ''}`}
+  style={{
+    backgroundImage: "url('/waves.svg')", 
+    backgroundRepeat: 'no-repeat', 
+    backgroundPosition: 'center bottom', // Positions the wave at the bottom center
+    backgroundSize: 'cover', // Ensures the wave spans the full width
+    padding: '6rem 0', // Increase padding to give more space above the wave
+    width: '100%', // Ensures it takes up the full width of the viewport
+    maxWidth: '100%',
+  }}
+>
+  <h1 className="text-black-600 text-4xl md:text-9xl font-bold">Joshua</h1>
+  <h2 className="text-black-600 text-4xl md:text-9xl font-bold">Chou</h2>
 
-</div>
+
+
       <br /><br /><br />
       <div className={`mt-3 text-2xl ${animate ? styles.startSlideLeft : ''}`}>
-        <p className="font-bold">I am a Computer Science student at the University of Toronto and a<br />
-          <span className="text-blue-600">software developer</span>
-        </p>
-      </div>
-    </main>
+      <p className="font-bold">
+  I am a Computer Science student at the University of Toronto and a<br />
+  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text">software developer</span>
+</p>
 
-    {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 py-8">
-        {sections.map((section) => (
-          <a key={section.title} href={section.link} target="_blank" className=" border-solid border-2 border-sky-500 flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg hover:-translate-y-2 transition-transform duration-300">
-            <h3 className="text-lg font-bold text-white">{section.title}</h3>
-            <p className="mt-2 text-gray-300">{section.description}</p>
-          </a>
-        ))}
-      </div> */}
-       <section className="w-full">
+      </div>
+      </div>
+
+    </main>
+    </div>
+   
+       <section className="w-full bg-[#001734]">
 
 {projects.map((project, index) => (
   <div key={project.title} className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center my-8`}>

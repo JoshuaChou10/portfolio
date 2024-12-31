@@ -25,7 +25,7 @@ return (
         <Link href="/" legacyBehavior><a className="text-gray-300 hover:text-white">Home</a></Link>
         <Link href="/about" legacyBehavior><a className="text-gray-300 hover:text-white">About</a></Link>
         <Link href="/experience" legacyBehavior><a className="text-gray-300 hover:text-white">Experience</a></Link>
-        <Link href="/skills" legacyBehavior><a className="text-gray-300 hover:text-white">Skills and Awards</a></Link>
+        <Link href="/awards" legacyBehavior><a className="text-gray-300 hover:text-white">Awards</a></Link>
       </div>
       <Link href="mailto:joshuachou912@gmail.com" legacyBehavior>
         <a className="text-gray-900 bg-white px-6 py-2 rounded-md hover:bg-blue-700 hover:text-white">

@@ -24,13 +24,17 @@ const Skills = () => {
   return (
     <>
       <Head>
-        <title>Experience | Joshua Chou</title>
+        <title>Awards | Joshua Chou</title>
       </Head>
       <Navbar />
-
+      <style jsx global>{`
+      body {
+        background: #001734 !important; /* Force the body background to blue */
+      }
+    `}</style>
       <section className="py-6 pt-20 lg:pt-24">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center">Skills and Awards</h2>
+          <h2 className="text-3xl font-bold text-center">Awards</h2>
           <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-10">
              {/* Mississauga Open Data Hackathon Award */}
              <div className="award-box bg-gradient-to-t from-[#8a6700] via-[#ca9f06] to-[#fed700] rounded-lg p-8 shadow-lg">

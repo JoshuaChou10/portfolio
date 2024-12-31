@@ -6,13 +6,17 @@ import { FaExternalLinkAlt } from 'react-icons/fa'
 import Footer from '../components/footer'
 const About = () => {
   return (
-    <>
+    <div className="bg-[#001734]">
       <Head>
         <title>About | Joshua Chou</title>
       </Head>
       <Navbar />
-  
-      <main className="flex flex-col md:flex-row md:justify-center md:items-center  my-12 mx-auto px-20 pt-20 lg:pt-24">
+      <style jsx global>{`
+      body {
+        background: #001734 !important; /* Force the body background to blue */
+      }
+    `}</style>
+      <main className="flex flex-col md:flex-row md:justify-center md:items-center  my-12 mx-auto px-20 pt-20 lg:pt-24 ">
 
         {/* Image section */}
         <div className="md:w-1/3 flex justify-center mb-6 md:mb-0">
@@ -117,7 +121,7 @@ const About = () => {
   </div>
 </section>
 <Footer />
-    </>
+    </div>
   );
   
 };
