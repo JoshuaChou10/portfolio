@@ -48,71 +48,87 @@ const Home = () => {
   // ];
   return (
     <div className="flex flex-col w-full pt-20 lg:pt-24 ">
-     <div className="bg-[#F95738]"> 
-  
-     
-    <Navbar />
+      <div className="bg-[#F95738]">
+      <Navbar />
       <Head>
         <title>Joshua Chou | Software Developer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-   
-      {/* Adjust the top margin to move the content up */}
+
       <main className="flex flex-col items-center w-full text-center mt-8">
-      <div 
-  className={`flex flex-col items-center justify-center ${animate ? styles.startSlideRight : ''}`}
-  style={{
-    backgroundImage: "url('/waves.svg')", 
-    backgroundRepeat: 'no-repeat', 
-    backgroundPosition: 'center bottom', // Positions the wave at the bottom center
-    backgroundSize: 'cover', // Ensures the wave spans the full width
-    padding: '6rem 0', // Increase padding to give more space above the wave
-    width: '100%', // Ensures it takes up the full width of the viewport
-    maxWidth: '100%',
-  }}
->
-  <h1 className="text-black-600 text-4xl md:text-9xl font-bold">Joshua</h1>
-  <h2 className="text-black-600 text-4xl md:text-9xl font-bold">Chou</h2>
+        <div
+          className={`flex flex-col items-center justify-center ${
+            animate ? styles.startSlideDown : ''
+          }`}
+          style={{
+            backgroundImage: "url('/waves.svg')",
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center bottom',
+            backgroundSize: 'cover',
+            padding: '6rem 0',
+            width: '100%',
+            maxWidth: '100%',
+          }}
+        >
+          <h1 className="text-black-600 text-4xl md:text-9xl font-bold">Joshua</h1>
+          <h2 className="text-black-600 text-4xl md:text-9xl font-bold">Chou</h2>
 
-
-
-      <br /><br /><br />
-      <div className={`mt-3 text-2xl ${animate ? styles.startSlideLeft : ''}`}>
-      <p className="font-bold">
-  I am a Computer Science student at the University of Toronto and a<br />
-  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text">software developer</span>
-</p>
-
-      </div>
-      </div>
-
-    </main>
+          <br />
+          <br />
+          <br />
+          <div className="mt-3 text-2xl">
+            <p className="font-bold">
+              I am a Computer Science student at the University of Toronto and a
+              <br />
+              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text">
+                software developer
+              </span>
+            </p>
+          </div>
+        </div>
+      </main>
     </div>
    
-       <section className="w-full bg-[#001734]">
+    <section className="w-full bg-[#001734]">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    {projects.map((project, index) => (
+      <div
+        key={project.title}
+        className={`flex ${
+          index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+        } items-center my-8`}
+      >
+        {/* Project Image */}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={project.link}
+          className="w-full md:w-1/2 hover:translate-y-[-10px] transition-transform duration-300"
+        >
+          <Image
+            className="w-full h-auto object-cover"
+            src={project.imageUrl}
+            alt={project.title}
+            width={500}
+            height={600}
+          />
+        </a>
 
-{projects.map((project, index) => (
-  <div key={project.title} className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center my-8`}>
-    
-    {/* Project Image */}
-    <a target='_blank' rel="noopener noreferrer" href={project.link} className="w-full md:w-1/2 hover:translate-y-[-10px] transition-transform duration-300">
-      <Image  className="w-full h-auto object-cover" src={project.imageUrl} alt={project.title} width={500} height={600} />
-    </a>
-    
-    {/* Project Description */}
-    <div className="w-full md:w-1/2 mt-4 md:mt-0 md:ml-4 flex justify-center md:justify-start">
-      <div className="text-center md:text-left mx-auto md:mx-500 px-4 md:px-0 w-41">
-        <h3 className="text-lg font-bold">{project.title}</h3>
-        <p className="mt-2 text-white-600">{project.description}</p>
-        <div className="mt-4">
-          {/* Other content */}
+        {/* Project Description */}
+        <div className="w-full md:w-1/2 mt-4 md:mt-0 md:ml-4 flex justify-center md:justify-start">
+          <div className="text-center md:text-left mx-auto md:mx-500 px-4 md:px-0 w-41">
+            <h3 className="text-lg font-bold">{project.title}</h3>
+            <p className="mt-2 text-white-600">{project.description}</p>
+            <div className="mt-4">
+              {/* Other content */}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
+    ))}
   </div>
-))}
 </section>
+
 
 <Footer />
 
