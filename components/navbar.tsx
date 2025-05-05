@@ -23,6 +23,7 @@ return (
       </Link>
       <div className="hidden lg:flex space-x-4"> {/* This part will only show on large screens */}
         <Link href="/" legacyBehavior><a className="text-gray-300 hover:text-white">Home</a></Link>
+        <Link href="/projects" legacyBehavior><a className="text-gray-300 hover:text-white">Projects</a></Link>
         <Link href="/about" legacyBehavior><a className="text-gray-300 hover:text-white">About</a></Link>
         <Link href="/experience" legacyBehavior><a className="text-gray-300 hover:text-white">Experience</a></Link>
         <Link href="/awards" legacyBehavior><a className="text-gray-300 hover:text-white">Awards</a></Link>
