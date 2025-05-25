@@ -35,7 +35,7 @@ const About = () => {
           <p className="mt-2 text-lg">
   I&apos;m a Computer Science student at the University of Toronto and a software developer. <br></br>
   I have been a passionate programmer for over 5 years. Whether it&apos;s through the creativity of hackathons or developing educational applications, 
-  I code because I want to innovate, reason through tasks, and build programs that benefit others and simplify everyday life.
+  I code because I want to innovate, improve my reasoning skills, and build programs that benefit others and simplify everyday life.
 </p>
 
         </div>
