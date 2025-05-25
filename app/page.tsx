@@ -59,8 +59,8 @@ const Home = () => {
       <main className="flex flex-col items-center w-full text-center mt-8">
         <div
           className={`flex flex-col items-center justify-center ${
-            animate ? styles.startSlideDown : ''
-          }`}
+                         animate ? styles.startSlideRight : ''
+                      }`}
           style={{
             backgroundImage: "url('/waves.svg')",
             backgroundRepeat: 'no-repeat',

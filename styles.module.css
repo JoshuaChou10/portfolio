@@ -1,10 +1,11 @@
 /* styles.module.css */
+
 @keyframes slideRight {
-  from {
-    transform: translateX(100%);
+  0% {
+    transform: translateX(-100%);
     opacity: 0;
   }
-  to {
+  100% {
     transform: translateX(0);
     opacity: 1;
   }
@@ -21,15 +22,8 @@
   }
 }
 
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.startSlideLeft {
+  animation: slideLeft 1s ease-out forwards;
 }
 
 
@@ -38,10 +32,12 @@
   animation: slideRight 1s ease forwards;
 }
 
-.startSlideLeft {
-  animation: slideLeft 1s ease forwards;
-}
 
 .startSlideDown {
   animation: slideDown 1s ease forwards;
+}
+
+
+.startSlideRight {
+  animation: slideRight 1s ease-out forwards;
 }
