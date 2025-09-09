@@ -62,11 +62,11 @@ const projects = [
     tags: ['Next.js', 'Tailwind CSS', 'Vercel']
   },
   {
-    title: 'Learn Chemistry-Brookedge Academy',
+    title: 'ChemQuest-Brookedge Academy',
     description:
       'An interactive app developed for Brookedge Academy. I received the Volunteer of the Year award for the development of this app. It was posted on Brookedge Academy\'s main website. The interactive quizzes and features were used in the Young Chemists Workshop I led.',
     imageUrl: '/chem.png',
-    link: 'https://www.brookedge.org/event-details/young-chemists-workshop-2022-08-08-16-00-1',
+    link: 'https://chemquest.vercel.app/',
     tags: ['Javascript','HTML','CSS']
   },
   {

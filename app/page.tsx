@@ -6,6 +6,8 @@ import Navbar from '../components/navbar';
 import styles from '../styles.module.css'; 
 import Image from 'next/image';
 import Footer from '../components/footer'
+// import River from "../components/river";
+
 import { setDefaultAutoSelectFamily } from "net";
 //relief exchange github
 // https://github.com/AritroSaha10/ReliefExchange-ICS4U/tree/ce97ac9770ed0dded6ecdace65ab861707565b3e
@@ -17,10 +19,10 @@ const Home = () => {
     { title: 'Fraser Hacks', description: "John Fraser Secondary School's official hackathon website. I was responsible for the developing the animations and hackathon description section.", imageUrl: '/hacks.png' ,link:'https://www.fraserhacks.ca/'},
     { title: 'Discover UofT: DeerHacks', description: "A website designed for clubs at the University of Toronto to post upcoming events and notify users. I worked on the frontend and integrated a machine learning model to personalize event recommendations for users. ", imageUrl: '/discover-utm.png' ,link:'https://devpost.com/software/discover-utm'},
     {title:'Scholar', description: 'A streamlined school and course manager that allows students to take notes, set reminders, save important links, keep track of their schedule, the weather and any upcoming assessments', imageUrl: '/scholar.png' ,link:"https://scholar-j.vercel.app/"},
+    { title: 'ChemQuest-Brookedge Academy', description: "An interactive app developed for Brookedge Academy. I received the Volunteer of the Year award for the development of this app. It was posted on Brookedge Academy's main website. The interactive quizzes and features were used in the Young Chemists Workshop I led. ", imageUrl: '/chem.png' ,link:'https://chemquest.vercel.app/'},
     { title: 'Grade Genius', description: 'A comprehensive course manager app utilizing Flask, SQL and JavaScript. This application allows students to track course assessments, grades, goals, study times and notes. ', imageUrl: '/grade-genius.png' ,link:'https://youtu.be/cccXBHTkUmE?si=prIcJLCm2WQCiaNT'},
     { title: 'Relief Exchange', description: 'Designed to alleviate poverty, this platform provides a connection for donors and those in need. It facilitates an impactful exchange of resources, easily reaching the underprivileged and those willing to help. I worked on both the backend and frontend, utilizing Golang, Next.js and Firebase. ', imageUrl: '/relief-ex.png' ,link:"https://reliefexchange.aritrosaha.ca/"},
     { title: 'Mindfulness and Meditation', description: 'An application for anyone interested in starting meditation practice. Includes a mindfulness course, meditation timer and calendar.', imageUrl: '/mindfulness.png' ,link:"https://mindfulness-eight.vercel.app/"},
-    { title: 'Learn Chemistry-Brookedge Academy', description: "An interactive app developed for Brookedge Academy. I received the Volunteer of the Year award for the development of this app. It was posted on Brookedge Academy's main website. The interactive quizzes and features were used in the Young Chemists Workshop I led. ", imageUrl: '/chem.png' ,link:'https://www.brookedge.org/event-details/young-chemists-workshop-2022-08-08-16-00-1'},
     { title: 'Canadian High Schools', description: 'Led the development of a wiki platform where high school students can share tools and information while earning volunteer hours. My role focused on using Django to build a user-friendly interface.  ', imageUrl: '/chs-logo.png' ,link:'http://cahighschools.org/login'},
     { title: 'Tracker', description: 'It has been proven that it is easier to build habits than to break them. This application acts as a progress tracker for anyone looking to set goals and improve their daily lives. ', imageUrl: '/tracker.png' ,link:'https://tracker-six-orpin.vercel.app/'},
 
@@ -79,7 +81,7 @@ const Home = () => {
           <br />
           <div className="mt-3 text-2xl">
             <p className="font-bold">
-              I am a Computer Science student at the University of Toronto and a
+              I am a Computer science and statistics major at the University of Toronto and a
               <br />
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text">
                 software developer
@@ -91,6 +93,8 @@ const Home = () => {
     </div>
    
     <section className="w-full bg-[#001734]">
+    {/* <section className="w-full bg-[#001734] relative river-section">
+    <River /> */}
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     {projects.map((project, index) => (
       <div
@@ -129,6 +133,7 @@ const Home = () => {
     ))}
   </div>
 </section>
+{/* </section> */}
 
 
 <Footer />

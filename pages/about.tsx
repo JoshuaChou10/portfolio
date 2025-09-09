@@ -33,9 +33,9 @@ const About = () => {
         <div className="md:w-2/3 text-center md:text-left">
           <h1 className="text-4xl font-bold">Hi,  I&apos;m Joshua.</h1>
           <p className="mt-2 text-lg">
-  I&apos;m a Computer Science student at the University of Toronto and a software developer. <br></br>
+  I&apos;m a Computer Science and Statistics Major at the University of Toronto and a software developer. <br></br>
   I have been a passionate programmer for over 5 years. Whether it&apos;s through the creativity of hackathons or developing educational applications, 
-  I code because I want to innovate, improve my reasoning skills, and build programs that benefit others and simplify everyday life.
+  I code because I want to innovate, train my reasoning skills, and build programs that benefit others and simplify everyday life.
 </p>
 
         </div>
