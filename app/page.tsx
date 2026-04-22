@@ -1,145 +1,158 @@
-// app/page.tsx
 "use client";
-import Head from "next/head";
-import {useState } from 'react';
-import Navbar from '../components/navbar';
-import styles from '../styles.module.css'; 
-import Image from 'next/image';
-import Footer from '../components/footer'
-// import River from "../components/river";
 
-import { setDefaultAutoSelectFamily } from "net";
-//relief exchange github
-// https://github.com/AritroSaha10/ReliefExchange-ICS4U/tree/ce97ac9770ed0dded6ecdace65ab861707565b3e
-const Home = () => {
-  const [animate] = useState(true);
-  const projects = [
-    //put certificae 
-    { title: 'Solar Index Map: Mississauga Open Data Hackathon 4th place overall', description: "A website with an interactive heatmap using open data to design a solar index map for evaluating solar energy potential. This project was created in the Mississauga Open Data Hackathon and won 4th place overall. I worked on the frontend using leaflet.js and heatmap.js", imageUrl: '/solar.png' ,link:'https://opendata-hackathon-2024-mississauga.hub.arcgis.com/'},
-    { title: 'Fraser Hacks', description: "John Fraser Secondary School's official hackathon website. I was responsible for the developing the animations and hackathon description section.", imageUrl: '/hacks.png' ,link:'https://www.fraserhacks.ca/'},
-    { title: 'Discover UofT: DeerHacks', description: "A website designed for clubs at the University of Toronto to post upcoming events and notify users. I worked on the frontend and integrated a machine learning model to personalize event recommendations for users. ", imageUrl: '/discover-utm.png' ,link:'https://devpost.com/software/discover-utm'},
-    {title:'Scholar', description: 'A streamlined school and course manager that allows students to take notes, set reminders, save important links, keep track of their schedule, the weather and any upcoming assessments', imageUrl: '/scholar.png' ,link:"https://scholar-j.vercel.app/"},
-    { title: 'ChemQuest-Brookedge Academy', description: "An interactive app developed for Brookedge Academy. I received the Volunteer of the Year award for the development of this app. It was posted on Brookedge Academy's main website. The interactive quizzes and features were used in the Young Chemists Workshop I led. ", imageUrl: '/chem.png' ,link:'https://chemquest.vercel.app/'},
-    { title: 'Grade Genius', description: 'A comprehensive course manager app utilizing Flask, SQL and JavaScript. This application allows students to track course assessments, grades, goals, study times and notes. ', imageUrl: '/grade-genius.png' ,link:'https://youtu.be/cccXBHTkUmE?si=prIcJLCm2WQCiaNT'},
-    { title: 'Relief Exchange', description: 'Designed to alleviate poverty, this platform provides a connection for donors and those in need. It facilitates an impactful exchange of resources, easily reaching the underprivileged and those willing to help. I worked on both the backend and frontend, utilizing Golang, Next.js and Firebase. ', imageUrl: '/relief-ex.png' ,link:"https://reliefexchange.aritrosaha.ca/"},
-    { title: 'Mindfulness and Meditation', description: 'An application for anyone interested in starting meditation practice. Includes a mindfulness course, meditation timer and calendar.', imageUrl: '/mindfulness.png' ,link:"https://mindfulness-eight.vercel.app/"},
-    { title: 'Canadian High Schools', description: 'Led the development of a wiki platform where high school students can share tools and information while earning volunteer hours. My role focused on using Django to build a user-friendly interface.  ', imageUrl: '/chs-logo.png' ,link:'http://cahighschools.org/login'},
-    { title: 'Tracker', description: 'It has been proven that it is easier to build habits than to break them. This application acts as a progress tracker for anyone looking to set goals and improve their daily lives. ', imageUrl: '/tracker.png' ,link:'https://tracker-six-orpin.vercel.app/'},
+import { motion } from "framer-motion";
 
-  ];
-  // const sections = [
-  //   {
-  //     title: 'About Me',
-  //     description: 'Learn more about who I am, my hobbies and extracurriculars.',
-  //     link: '/about',
-  //   },
-  //   {
-  //     title: 'My Projects',
-  //     description: "Discover my portfolio of projects from web applications to software solutions.",
-  //     link: '/projects',
-  //   },
-  //   {
-  //     title: 'Experience',
-  //     description: 'Learn about my professional journey and the experiences that have shaped my career.',
-  //     link: '/experiences',
-  //   },
-  //   {
-  //     title: 'My Skills and Awards',
-  //     description: 'Explore the skills I’ve acquired and the recognition I’ve achieved along the way.',
-  //     link: '/skills',
-  //   },
-  // ];
+const leaves = [
+  { cx: 118, cy: 210, r: 14, delay: 1.75 },
+  { cx: 138, cy: 188, r: 12, delay: 1.82 },
+  { cx: 162, cy: 220, r: 13, delay: 1.9 },
+  { cx: 176, cy: 182, r: 11, delay: 1.98 },
+  { cx: 280, cy: 188, r: 13, delay: 1.86 },
+  { cx: 302, cy: 166, r: 12, delay: 1.94 },
+  { cx: 324, cy: 196, r: 14, delay: 2.02 },
+  { cx: 258, cy: 218, r: 12, delay: 2.08 },
+  { cx: 214, cy: 160, r: 11, delay: 2.12 },
+  { cx: 196, cy: 198, r: 10, delay: 2.18 },
+];
+
+export default function Home() {
   return (
-    <div className="flex flex-col w-full pt-20 lg:pt-24 ">
-      <div className="bg-[#F95738]">
-      <Navbar />
-      <Head>
-        <title>Joshua Chou | Software Developer</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <main className="relative min-h-screen overflow-hidden bg-neutral-950 text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.12),transparent_35%),radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_40%)]" />
 
-      <main className="flex flex-col items-center w-full text-center mt-8">
-        <div
-          className={`flex flex-col items-center justify-center ${
-                         animate ? styles.startSlideRight : ''
-                      }`}
-          style={{
-            backgroundImage: "url('/waves.svg')",
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center bottom',
-            backgroundSize: 'cover',
-            padding: '6rem 0',
-            width: '100%',
-            maxWidth: '100%',
-          }}
+      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 2.1 }}
+          className="mb-8 text-center"
         >
-          <h1 className="text-black-600 text-4xl md:text-9xl font-bold">Joshua</h1>
-          <h2 className="text-black-600 text-4xl md:text-9xl font-bold">Chou</h2>
 
-          <br />
-          <br />
-          <br />
-          <div className="mt-3 text-2xl">
-            <p className="font-bold">
-              I am a Computer science and statistics major at the University of Toronto and a
-              <br />
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text">
-                software developer
-              </span>
-            </p>
-          </div>
-        </div>
-      </main>
-    </div>
-   
-    <section className="w-full bg-[#001734]">
-    {/* <section className="w-full bg-[#001734] relative river-section">
-    <River /> */}
-  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    {projects.map((project, index) => (
-      <div
-        key={project.title}
-        className={`flex ${
-          index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
-        } items-center my-8`}
-      >
-        {/* Project Image */}
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href={project.link}
-          className="w-full md:w-1/2 hover:translate-y-[-10px] transition-transform duration-300"
-        >
-          <Image
-            className="w-full h-auto object-cover"
-            src={project.imageUrl}
-            alt={project.title}
-            width={500}
-            height={600}
+          <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl">
+            Joshua Chou
+          </h1>
+          <p className="mt-4 max-w-xl text-sm text-white/70 sm:text-base">
+            I am a computer science and statistics major at the University of Toronto and a
+            <br />
+            <span className="bg-gradient-to-r from-green-400 to-green-600 text-transparent bg-clip-text">
+              software developer
+            </span>
+          </p>
+        </motion.div>
+
+        <div className="relative">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.22 }}
+            transition={{ duration: 1.2, delay: 1.8 }}
+            className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-green-400 blur-3xl"
           />
-        </a>
 
-        {/* Project Description */}
-        <div className="w-full md:w-1/2 mt-4 md:mt-0 md:ml-4 flex justify-center md:justify-start">
-          <div className="text-center md:text-left mx-auto md:mx-500 px-4 md:px-0 w-41">
-            <h3 className="text-lg font-bold">{project.title}</h3>
-            <p className="mt-2 text-white-600">{project.description}</p>
-            <div className="mt-4">
-              {/* Other content */}
-            </div>
-          </div>
+          <svg
+            viewBox="0 0 400 500"
+            className="relative h-auto w-[320px] sm:w-[420px]"
+            fill="none"
+          >
+            {/* trunk */}
+            <motion.path
+              d="M200 460 C198 405 194 355 196 310 C198 270 203 245 200 210"
+              stroke="#7C4A2D"
+              strokeWidth="12"
+              strokeLinecap="round"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1.2, ease: "easeInOut" }}
+            />
+
+            {/* main branches */}
+            <motion.path
+              d="M199 275 C170 255 148 235 122 205"
+              stroke="#7C4A2D"
+              strokeWidth="7"
+              strokeLinecap="round"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 0.7, delay: 0.95, ease: "easeInOut" }}
+            />
+            <motion.path
+              d="M201 265 C232 242 262 218 298 182"
+              stroke="#7C4A2D"
+              strokeWidth="7"
+              strokeLinecap="round"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 0.75, delay: 1.05, ease: "easeInOut" }}
+            />
+            <motion.path
+              d="M198 230 C184 205 174 185 162 162"
+              stroke="#7C4A2D"
+              strokeWidth="5"
+              strokeLinecap="round"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 0.55, delay: 1.3, ease: "easeInOut" }}
+            />
+            <motion.path
+              d="M203 225 C220 200 238 178 255 156"
+              stroke="#7C4A2D"
+              strokeWidth="5"
+              strokeLinecap="round"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 0.55, delay: 1.36, ease: "easeInOut" }}
+            />
+            <motion.path
+              d="M138 223 C152 206 162 194 176 176"
+              stroke="#7C4A2D"
+              strokeWidth="4"
+              strokeLinecap="round"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 0.45, delay: 1.48, ease: "easeInOut" }}
+            />
+            <motion.path
+              d="M270 208 C288 192 302 176 316 158"
+              stroke="#7C4A2D"
+              strokeWidth="4"
+              strokeLinecap="round"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 0.45, delay: 1.54, ease: "easeInOut" }}
+            />
+
+            {/* leaves */}
+            {leaves.map((leaf, index) => (
+              <motion.circle
+                key={index}
+                cx={leaf.cx}
+                cy={leaf.cy}
+                r={leaf.r}
+                fill="#4ADE80"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{
+                  duration: 0.35,
+                  delay: leaf.delay,
+                  ease: "easeOut",
+                }}
+                style={{ transformOrigin: `${leaf.cx}px ${leaf.cy}px` }}
+              />
+            ))}
+
+            {/* ground */}
+            <motion.ellipse
+              cx="200"
+              cy="472"
+              rx="70"
+              ry="10"
+              fill="rgba(255,255,255,0.14)"
+              initial={{ opacity: 0, scaleX: 0.8 }}
+              animate={{ opacity: 1, scaleX: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            />
+          </svg>
         </div>
       </div>
-    ))}
-  </div>
-</section>
-{/* </section> */}
-
-
-<Footer />
-
-    </div>
-  )
+    </main>
+  );
 }
-
-export default Home;
