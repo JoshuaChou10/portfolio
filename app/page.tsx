@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-
+import Footer from "../components/footer";
 type Section = "tree" | "about" | "projects";
 
 const leaves = [
@@ -448,13 +448,13 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState<Section>("tree");
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-neutral-950 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.12),transparent_35%),radial-gradient(circle_at_top,rgba(255,255,255,0.06),transparent_42%)]" />
+<main className="relative flex min-h-screen flex-col overflow-hidden bg-neutral-950 text-white">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.12),transparent_35%),radial-gradient(circle_at_top,rgba(255,255,255,0.06),transparent_42%)]" />
 
       <CloudNav activeSection={activeSection} onSelect={setActiveSection} />
 
-      <div className="relative z-10 flex min-h-screen flex-col px-6 pb-10 pt-32">
-        <motion.header
+      <div className="relative z-10 flex flex-1 flex-col px-6 pb-4 pt-32">
+                <motion.header
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}
@@ -492,6 +492,11 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="relative z-10 border-t border-white/10 bg-white/5 px-6 py-4 text-center text-sm text-white/60 backdrop-blur-xl">
+  <Footer />
+</div>
     </main>
+      
+
   );
 }

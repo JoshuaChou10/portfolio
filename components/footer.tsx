@@ -6,7 +6,7 @@ import { faFile } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white p-4">
+    <footer className="bg-transparent text-white/70">
       <div className="container mx-auto text-center">
         <div className="mb-2">
           <a href="/resume.pdf" className="text-blue-400 hover:text-blue-600 mx-2">
