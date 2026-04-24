@@ -243,12 +243,27 @@ function AboutStage({
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="mx-auto w-full max-w-3xl rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-xl sm:p-10"
     >
-      <p className="mb-3 text-xs uppercase tracking-[0.35em] text-white/50">
-        About
-      </p>
-      <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-        Software Engineer at the University of Toronto with interests in meditation, teaching and music
-      </h2>
+    <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
+  <div className="flex-shrink-0">
+    <Image
+      src="/profile_pic.jpeg"
+      alt="Joshua Chou"
+      width={180}
+      height={180}
+      className="rounded-full border border-white/10 object-cover"
+    />
+  </div>
+
+  <div>
+    <p className="mb-3 text-xs uppercase tracking-[0.35em] text-white/50">
+      About
+    </p>
+
+    <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+      Software Engineer at the University of Toronto with interests in meditation, teaching and music
+    </h2>
+  </div>
+</div>
 
       <div className="mt-6 max-w-2xl text-base leading-8 text-white/75">
   <p className="font-semibold text-white/90">Currently I&apos;m...</p>
