@@ -91,8 +91,7 @@ function TreeStage() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -24 }}
       transition={{ duration: 0.45, ease: "easeOut" }}
-      className="relative flex h-full w-full items-center justify-center"
-    >
+      className="relative flex h-full w-full flex-col items-center justify-center gap-4"    >
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.22 }}
@@ -102,8 +101,8 @@ function TreeStage() {
 
       <svg
         viewBox="0 0 400 500"
-        className="relative h-auto w-[320px] sm:w-[420px]"
-        fill="none"
+        className="relative -translate-y-8 h-auto w-[260px] sm:w-[340px]"
+                fill="none"
       >
         <motion.path
           d="M200 460 C198 405 194 355 196 310 C198 270 203 245 200 210"
@@ -204,8 +203,29 @@ function TreeStage() {
           transition={{ duration: 0.6, delay: 0.4 }}
         />
       </svg>
+      <motion.blockquote
+  initial={{ opacity: 0, y: 16 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 2.4 }}
+  className="relative -mt-8 max-w-sm text-center text-sm leading-7 text-white/60 sm:text-base"
+>
+  <p>
+    “i closed my eyes
+    <br />
+    to look inward
+    <br />
+    and found a universe
+    <br />
+    waiting to be explored”
+  </p>
+  <footer className="mt-3 text-xs uppercase tracking-[0.25em] text-white/40">
+    Yung Pueblo
+  </footer>
+</motion.blockquote>
     </motion.div>
+    
   );
+  
 }
 
 function AboutStage({
