@@ -18,23 +18,7 @@ const leaves = [
   { cx: 196, cy: 198, r: 10, delay: 2.18 },
 ] as const;
 
-const projects = [
-  {
-    title: "Project One",
-    description: "A short description of your project goes here.",
-    tag: "Next.js",
-  },
-  {
-    title: "Project Two",
-    description: "A short description of your project goes here.",
-    tag: "UI Design",
-  },
-  {
-    title: "Project Three",
-    description: "A short description of your project goes here.",
-    tag: "Frontend",
-  },
-] as const;
+
 
 function CloudNav({
   activeSection,
@@ -350,6 +334,14 @@ function ProjectsStage() {
       link: "https://www.fraserhacks.ca/",
       tags: ["Next.js", "Tailwind CSS"],
     },
+     {
+    title: 'FridgeFlow',
+    description:
+      "FridgeFlow is a project built for the IBMZ X UNSA hackathon. It utilizes IBM watsonx.ai and allows users to upload a fridge photo or enter ingredients, then get meal recommendations based on available food, expiry date, and health goals. It also provides recipes, nutrition tracking, grocery suggestions, and fridge storage management.",
+    imageUrl: '/Fridge.png',
+    link: 'https://devpost.com/software/fridgeflow',
+    tags: ['Machine Learning', 'watsonx.ai', 'Next.js', 'Tailwind CSS']
+  },
     {
       title: "Discover UofT: DeerHacks",
       description:
