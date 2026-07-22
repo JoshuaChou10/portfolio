@@ -1,9 +1,7 @@
 "use client";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { motion } from "framer-motion";
 import Footer from "../components/footer";
-type Section = "tree" | "about" | "projects";
 
 const leaves = [
   { cx: 118, cy: 210, r: 14, delay: 1.75 },
@@ -20,50 +18,33 @@ const leaves = [
 
 
 
-function CloudNav({
-  activeSection,
-  onSelect,
-}: {
-  activeSection: Section;
-  onSelect: (section: Section) => void;
-}) {
-  const isAboutActive = activeSection === "about";
-  const isProjectsActive = activeSection === "projects";
-
+function CloudNav() {
   return (
-    <div className="absolute left-1/2 top-6 z-30 -translate-x-1/2">
+    <nav className="fixed left-1/2 top-6 z-30 -translate-x-1/2" aria-label="Portfolio sections">
       <div className="relative flex items-center justify-center px-8 py-6">
-        <div className="absolute left-6 top-7 h-14 w-14 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)]" />
-        <div className="absolute left-14 top-2 h-16 w-16 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)]" />
-        <div className="absolute left-28 top-0 h-20 w-20 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)]" />
-        <div className="absolute left-44 top-3 h-16 w-16 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)]" />
-        <div className="absolute left-56 top-8 h-12 w-12 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)]" />
+        <div className="pointer-events-none absolute left-6 top-7 h-14 w-14 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)]" />
+        <div className="pointer-events-none absolute left-14 top-2 h-16 w-16 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)]" />
+        <div className="pointer-events-none absolute left-28 top-0 h-20 w-20 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)]" />
+        <div className="pointer-events-none absolute left-44 top-3 h-16 w-16 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)]" />
+        <div className="pointer-events-none absolute left-56 top-8 h-12 w-12 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)]" />
 
         <div className="relative flex items-center gap-3 rounded-full bg-white/95 px-5 py-3 backdrop-blur-sm">
-          <button
-            onClick={() => onSelect(isAboutActive ? "tree" : "about")}
-            className={`rounded-full px-4 py-2 text-sm font-medium transition ${
-              isAboutActive
-                ? "bg-neutral-900 text-white"
-                : "text-neutral-700 hover:bg-neutral-100"
-            }`}
+          <a
+            href="#about"
+            className="rounded-full px-4 py-2 text-sm font-medium text-neutral-700 transition hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900"
           >
             About
-          </button>
+          </a>
 
-          <button
-            onClick={() => onSelect(isProjectsActive ? "tree" : "projects")}
-            className={`rounded-full px-4 py-2 text-sm font-medium transition ${
-              isProjectsActive
-                ? "bg-neutral-900 text-white"
-                : "text-neutral-700 hover:bg-neutral-100"
-            }`}
+          <a
+            href="#projects"
+            className="rounded-full px-4 py-2 text-sm font-medium text-neutral-700 transition hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900"
           >
             Projects
-          </button>
+          </a>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 
@@ -212,11 +193,7 @@ function TreeStage() {
   
 }
 
-function AboutStage({
-  setActiveSection,
-}: {
-  setActiveSection: (section: Section) => void;
-}) {
+function AboutStage() {
 
   return (
     <motion.section
@@ -280,31 +257,31 @@ function AboutStage({
   <ul className="ml-5 list-disc space-y-1">
     <li>
       Developed the official{" "}
-      <button
-        onClick={() => setActiveSection("projects")}
+      <a
+        href="#projects"
         className="font-medium text-blue-300 underline underline-offset-4 hover:text-blue-200"
       >
         FraserHacks website
-      </button>
+      </a>
    
     </li>
     <li>
       Awarded Volunteer of the Year at Brookedge Academy for developing{" "}
-      <button
-        onClick={() => setActiveSection("projects")}
+      <a
+        href="#projects"
         className="font-medium text-blue-300 underline underline-offset-4 hover:text-blue-200"
       >
         ChemQuest
-      </button>
+      </a>
     </li>
     <li>
       4th place winner at the{" "}
-      <button
-        onClick={() => setActiveSection("projects")}
+      <a
+        href="#projects"
         className="font-medium text-blue-300 underline underline-offset-4 hover:text-blue-200"
       >
         Mississauga Open Data Hackathon
-      </button>
+      </a>
     </li>
   </ul>
 </div>
@@ -472,16 +449,17 @@ function ProjectsStage() {
 }
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState<Section>("tree");
-
   return (
-<main className="relative flex min-h-screen flex-col overflow-hidden bg-neutral-950 text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.12),transparent_35%),radial-gradient(circle_at_top,rgba(255,255,255,0.06),transparent_42%)]" />
+    <main className="relative min-h-screen scroll-smooth overflow-x-hidden bg-neutral-950 text-white">
+      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.12),transparent_35%),radial-gradient(circle_at_top,rgba(255,255,255,0.06),transparent_42%)]" />
 
-      <CloudNav activeSection={activeSection} onSelect={setActiveSection} />
+      <CloudNav />
 
-      <div className="relative z-10 flex flex-1 flex-col px-6 pb-4 pt-32">
-                <motion.header
+      <section
+        id="home"
+        className="relative z-10 flex min-h-screen scroll-mt-32 flex-col px-6 pb-8 pt-32"
+      >
+        <motion.header
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}
@@ -491,17 +469,17 @@ export default function Home() {
             Portfolio
           </p>
 
-          <button
-            onClick={() => setActiveSection("tree")}
+          <a
+            href="#home"
             className="text-4xl font-semibold tracking-tight sm:text-6xl"
           >
             Joshua Chou
-          </button>
+          </a>
 
           <p className="mt-4 text-sm text-white/70 sm:text-base">
-          I am a computer science and statistics major at the University of Toronto and a
+            I am a computer science and statistics major at the University of Toronto and a
             <br />
-            <span className="bg-gradient-to-r from-green-400 to-green-600 text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
               software developer
             </span>
           </p>
@@ -509,21 +487,34 @@ export default function Home() {
 
         <div className="flex flex-1 items-center justify-center pt-10">
           <div className="flex min-h-[520px] w-full items-center justify-center">
-            <AnimatePresence mode="wait">
-              {activeSection === "tree" && <TreeStage />}
-              {activeSection === "about" && (
-              <AboutStage setActiveSection={setActiveSection} />
-            )}
-              {activeSection === "projects" && <ProjectsStage />}
-            </AnimatePresence>
+            <TreeStage />
           </div>
         </div>
-      </div>
-      <div className="relative z-10 border-t border-white/10 bg-white/5 px-6 py-4 text-center text-sm text-white/60 backdrop-blur-xl">
-  <Footer />
-</div>
-    </main>
-      
+      </section>
 
+      <section
+        id="about"
+        className="relative z-10 flex min-h-screen scroll-mt-28 items-center px-6 py-24"
+      >
+        <AboutStage />
+      </section>
+
+      <section
+        id="projects"
+        className="relative z-10 min-h-screen scroll-mt-28 px-6 py-24"
+      >
+        <ProjectsStage />
+      </section>
+
+      <div className="relative z-10 border-t border-white/10 bg-white/5 px-6 py-4 text-center text-sm text-white/60 backdrop-blur-xl">
+        <Footer />
+      </div>
+
+      <style jsx global>{`
+        html {
+          scroll-behavior: smooth;
+        }
+      `}</style>
+    </main>
   );
 }
