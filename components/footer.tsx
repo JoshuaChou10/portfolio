@@ -12,7 +12,7 @@ const Footer = () => {
           <a href="/resume.pdf" className="text-blue-400 hover:text-blue-600 mx-2">
             <FontAwesomeIcon icon={faFile} className="w-6 h-6"/> {/* Resume Icon */}
           </a>
-          <a href="https://github.com/JoshuaChou10/" target="_blank" className="text-blue-400 hover:text-blue-600 mx-2">
+          <a href="https://github.com/JoshuaChou10/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-600 mx-2">
             <FontAwesomeIcon icon={faGithub} className="w-6 h-6"/> {/* GitHub Icon */}
           </a>
           

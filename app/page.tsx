@@ -1,7 +1,10 @@
 "use client";
+
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Footer from "../components/footer";
+import FeaturedWork from "../components/featured-work";
+import MoreProjects from "../components/more-projects";
 
 const leaves = [
   { cx: 118, cy: 210, r: 14, delay: 1.75 },
@@ -16,29 +19,35 @@ const leaves = [
   { cx: 196, cy: 198, r: 10, delay: 2.18 },
 ] as const;
 
-
-
 function CloudNav() {
   return (
-    <nav className="fixed left-1/2 top-6 z-30 -translate-x-1/2" aria-label="Portfolio sections">
-      <div className="relative flex items-center justify-center px-8 py-6">
-        <div className="pointer-events-none absolute left-6 top-7 h-14 w-14 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)]" />
-        <div className="pointer-events-none absolute left-14 top-2 h-16 w-16 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)]" />
-        <div className="pointer-events-none absolute left-28 top-0 h-20 w-20 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)]" />
-        <div className="pointer-events-none absolute left-44 top-3 h-16 w-16 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)]" />
-        <div className="pointer-events-none absolute left-56 top-8 h-12 w-12 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)]" />
+    <nav
+      className="fixed left-1/2 top-4 z-30 -translate-x-1/2 sm:top-6"
+      aria-label="Portfolio sections"
+    >
+      <div className="relative flex items-center justify-center px-4 py-4 sm:px-8 sm:py-6">
+        <div className="pointer-events-none absolute left-6 top-7 hidden h-14 w-14 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)] sm:block" />
+        <div className="pointer-events-none absolute left-14 top-2 hidden h-16 w-16 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)] sm:block" />
+        <div className="pointer-events-none absolute left-28 top-0 hidden h-20 w-20 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)] sm:block" />
+        <div className="pointer-events-none absolute left-44 top-3 hidden h-16 w-16 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)] sm:block" />
+        <div className="pointer-events-none absolute left-56 top-8 hidden h-12 w-12 rounded-full bg-white shadow-[0_10px_30px_rgba(255,255,255,0.25)] sm:block" />
 
-        <div className="relative flex items-center gap-3 rounded-full bg-white/95 px-5 py-3 backdrop-blur-sm">
+        <div className="relative flex max-w-[calc(100vw-1.5rem)] items-center gap-1 overflow-x-auto rounded-full bg-white/95 px-3 py-2 backdrop-blur-sm sm:gap-3 sm:px-5 sm:py-3">
           <a
             href="#about"
-            className="rounded-full px-4 py-2 text-sm font-medium text-neutral-700 transition hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900"
+            className="whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-neutral-700 transition hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 sm:px-4"
           >
             About
           </a>
-
+          <a
+            href="#featured"
+            className="whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-neutral-700 transition hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 sm:px-4"
+          >
+            Work
+          </a>
           <a
             href="#projects"
-            className="rounded-full px-4 py-2 text-sm font-medium text-neutral-700 transition hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900"
+            className="whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-neutral-700 transition hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 sm:px-4"
           >
             Projects
           </a>
@@ -49,32 +58,35 @@ function CloudNav() {
 }
 
 function TreeStage() {
+  const reduceMotion = useReducedMotion();
+
   return (
     <motion.div
       key="tree"
-      initial={{ opacity: 0, y: 24 }}
+      initial={reduceMotion ? false : { opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -24 }}
       transition={{ duration: 0.45, ease: "easeOut" }}
-      className="relative flex h-full w-full flex-col items-center justify-center gap-4"    >
+      className="relative flex h-full w-full flex-col items-center justify-center gap-4"
+    >
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.22 }}
+        initial={reduceMotion ? false : { opacity: 0 }}
+        animate={{ opacity: reduceMotion ? 0.12 : 0.18 }}
         transition={{ duration: 1.2, delay: 1.7 }}
-        className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-green-400 blur-3xl"
+        className="absolute left-1/2 top-1/2 h-44 w-44 -translate-x-1/2 -translate-y-1/2 rounded-full bg-green-400 blur-3xl sm:h-56 sm:w-56"
       />
 
       <svg
         viewBox="0 0 400 500"
-        className="relative -translate-y-8 h-auto w-[260px] sm:w-[340px]"
-                fill="none"
+        className="relative h-auto w-[160px] -translate-y-4 sm:w-[220px]"
+        fill="none"
+        aria-hidden="true"
       >
         <motion.path
           d="M200 460 C198 405 194 355 196 310 C198 270 203 245 200 210"
           stroke="#7C4A2D"
           strokeWidth="12"
           strokeLinecap="round"
-          initial={{ pathLength: 0 }}
+          initial={{ pathLength: reduceMotion ? 1 : 0 }}
           animate={{ pathLength: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
         />
@@ -84,7 +96,7 @@ function TreeStage() {
           stroke="#7C4A2D"
           strokeWidth="7"
           strokeLinecap="round"
-          initial={{ pathLength: 0 }}
+          initial={{ pathLength: reduceMotion ? 1 : 0 }}
           animate={{ pathLength: 1 }}
           transition={{ duration: 0.7, delay: 0.95, ease: "easeInOut" }}
         />
@@ -94,7 +106,7 @@ function TreeStage() {
           stroke="#7C4A2D"
           strokeWidth="7"
           strokeLinecap="round"
-          initial={{ pathLength: 0 }}
+          initial={{ pathLength: reduceMotion ? 1 : 0 }}
           animate={{ pathLength: 1 }}
           transition={{ duration: 0.75, delay: 1.05, ease: "easeInOut" }}
         />
@@ -104,7 +116,7 @@ function TreeStage() {
           stroke="#7C4A2D"
           strokeWidth="5"
           strokeLinecap="round"
-          initial={{ pathLength: 0 }}
+          initial={{ pathLength: reduceMotion ? 1 : 0 }}
           animate={{ pathLength: 1 }}
           transition={{ duration: 0.55, delay: 1.3, ease: "easeInOut" }}
         />
@@ -114,7 +126,7 @@ function TreeStage() {
           stroke="#7C4A2D"
           strokeWidth="5"
           strokeLinecap="round"
-          initial={{ pathLength: 0 }}
+          initial={{ pathLength: reduceMotion ? 1 : 0 }}
           animate={{ pathLength: 1 }}
           transition={{ duration: 0.55, delay: 1.36, ease: "easeInOut" }}
         />
@@ -124,7 +136,7 @@ function TreeStage() {
           stroke="#7C4A2D"
           strokeWidth="4"
           strokeLinecap="round"
-          initial={{ pathLength: 0 }}
+          initial={{ pathLength: reduceMotion ? 1 : 0 }}
           animate={{ pathLength: 1 }}
           transition={{ duration: 0.45, delay: 1.48, ease: "easeInOut" }}
         />
@@ -134,7 +146,7 @@ function TreeStage() {
           stroke="#7C4A2D"
           strokeWidth="4"
           strokeLinecap="round"
-          initial={{ pathLength: 0 }}
+          initial={{ pathLength: reduceMotion ? 1 : 0 }}
           animate={{ pathLength: 1 }}
           transition={{ duration: 0.45, delay: 1.54, ease: "easeInOut" }}
         />
@@ -146,7 +158,7 @@ function TreeStage() {
             cy={leaf.cy}
             r={leaf.r}
             fill="#4ADE80"
-            initial={{ scale: 0, opacity: 0 }}
+            initial={reduceMotion ? false : { scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{
               duration: 0.35,
@@ -163,358 +175,201 @@ function TreeStage() {
           rx="70"
           ry="10"
           fill="rgba(255,255,255,0.14)"
-          initial={{ opacity: 0, scaleX: 0.8 }}
+          initial={reduceMotion ? false : { opacity: 0, scaleX: 0.8 }}
           animate={{ opacity: 1, scaleX: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         />
       </svg>
       <motion.blockquote
-  initial={{ opacity: 0, y: 16 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 2.4 }}
-  className="relative -mt-8 max-w-sm text-center text-sm leading-7 text-white/60 sm:text-base"
->
-  <p>
-    “i closed my eyes
-    <br />
-    to look inward
-    <br />
-    and found a universe
-    <br />
-    waiting to be explored”
-  </p>
-  <footer className="mt-3 text-xs uppercase tracking-[0.25em] text-white/40">
-    Yung Pueblo
-  </footer>
-</motion.blockquote>
+        initial={reduceMotion ? false : { opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: reduceMotion ? 0 : 2.4 }}
+        className="relative -mt-6 max-w-xs text-center text-xs leading-6 text-white/55 sm:text-sm"
+      >
+        <p>
+          “i closed my eyes
+          <br />
+          to look inward
+          <br />
+          and found a universe
+          <br />
+          waiting to be explored”
+        </p>
+        <footer className="mt-2 text-[10px] uppercase tracking-[0.22em] text-white/45">
+          Yung Pueblo
+        </footer>
+      </motion.blockquote>
     </motion.div>
-    
   );
-  
 }
 
 function AboutStage() {
-
   return (
-    <motion.section
+    <motion.aside
+      id="about"
       key="about"
       initial={{ opacity: 0, y: 24, scale: 0.98 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, y: -24, scale: 0.98 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="mx-auto w-full max-w-3xl rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-xl sm:p-10"
+      className="w-full max-w-3xl scroll-mt-32 overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-xl"
     >
-    <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
-  <div className="flex-shrink-0">
-    <Image
-      src="/profile_pic.jpeg"
-      alt="Joshua Chou"
-      width={180}
-      height={180}
-      className="rounded-full border border-white/10 object-cover"
-    />
-  </div>
+      <div className="grid grid-cols-1 sm:grid-cols-[1fr_minmax(180px,0.42fr)]">
+        <div className="order-2 p-6 sm:order-1 sm:p-8">
+          <p className="mb-2 text-xs uppercase tracking-[0.35em] text-white/50">
+            About
+          </p>
+         
 
-  <div>
-    <p className="mb-3 text-xs uppercase tracking-[0.35em] text-white/50">
-      About
-    </p>
+          <div className="mt-5 text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
+            <p className="font-semibold text-white/90">Currently I&apos;m...</p>
+            <ul className="ml-5 list-disc space-y-1">
+              <li>
+                Lead Software Developer of the {" "}
+                <a
+                  href="https://www.instagram.com/p/DXMwMuWEW8L/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-blue-300 underline underline-offset-4 hover:text-blue-200"
+                >
+                  CAGH UTM Chapter
+                </a>
+                 
+              </li>
+              <li>
+                Returning Peer Coach at the{" "}
+                <a
+                  href="https://www.instagram.com/p/DRNJbcwiJbL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-blue-300 underline underline-offset-4 hover:text-blue-200"
+                >
+                  International Education Centre 
+                </a>{" "}
+                UTM (great way to connect and meet new people)
+              </li>
+              <li>
+                Recommended Tutor at Superprof for over 5 years with 30 students
+              </li>
+            </ul>
 
-    <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-      Software Engineer at the University of Toronto with interests in meditation, teaching and music
-    </h2>
-  </div>
-</div>
+            <p className="mt-5 font-semibold text-white/90">I&apos;ve built...</p>
+            <ul className="ml-5 list-disc space-y-1">
+              <li>
+                Developed the official{" "}
+                <a
+                  href="#fraserhacks"
+                  className="font-medium text-blue-300 underline underline-offset-4 hover:text-blue-200"
+                >
+                  FraserHacks website
+                </a>
+              </li>
+              <li>
+                Awarded Volunteer of the Year at Brookedge Academy for developing{" "}
+                <a
+                  href="#chemquest"
+                  className="font-medium text-blue-300 underline underline-offset-4 hover:text-blue-200"
+                >
+                  ChemQuest
+                </a>
+              </li>
+              <li>
+                4th place winner at the{" "}
+                <a
+                  href="#solar"
+                  className="font-medium text-blue-300 underline underline-offset-4 hover:text-blue-200"
+                >
+                  Mississauga Open Data Hackathon
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-      <div className="mt-6 max-w-2xl text-base leading-8 text-white/75">
-  <p className="font-semibold text-white/90">Currently I&apos;m...</p>
-
-  <ul className="ml-5 list-disc space-y-1">
-    <li>
-      Vice President of{" "}
-      <a
-        href="https://www.instagram.com/thed3signhub.utm/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-medium text-blue-300 underline underline-offset-4 hover:text-blue-200"
-      >
-        TDH
-      </a>
-    </li>
-    <li>Peer Coach at the <a
-        href="https://www.instagram.com/p/DRNJbcwiJbL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-medium text-blue-300 underline underline-offset-4 hover:text-blue-200"
-      >
-        International Education Centre
-      </a> UTM</li>
-    <li>Recommended Tutor at Superprof for over 5 years with 30 students</li>
-  </ul>
-
-  <p className="mt-5 font-semibold text-white/90">I&apos;ve built...</p>
-
-  <ul className="ml-5 list-disc space-y-1">
-    <li>
-      Developed the official{" "}
-      <a
-        href="#projects"
-        className="font-medium text-blue-300 underline underline-offset-4 hover:text-blue-200"
-      >
-        FraserHacks website
-      </a>
-   
-    </li>
-    <li>
-      Awarded Volunteer of the Year at Brookedge Academy for developing{" "}
-      <a
-        href="#projects"
-        className="font-medium text-blue-300 underline underline-offset-4 hover:text-blue-200"
-      >
-        ChemQuest
-      </a>
-    </li>
-    <li>
-      4th place winner at the{" "}
-      <a
-        href="#projects"
-        className="font-medium text-blue-300 underline underline-offset-4 hover:text-blue-200"
-      >
-        Mississauga Open Data Hackathon
-      </a>
-    </li>
-  </ul>
-</div>
-     
-     
-
-      
-    </motion.section>
-  );
-}
-
-function ProjectsStage() {
-  const projects = [
-    {
-      title: "Solar Index Map: Mississauga Open Data Hackathon 4th place overall",
-      description:
-        "A website with an interactive heatmap using open data to design a solar index map for evaluating solar energy potential. This project was created in the Mississauga Open Data Hackathon and won 4th place overall. I worked on the frontend using leaflet.js and heatmap.js",
-      imageUrl: "/solar.png",
-      link: "https://opendata-hackathon-2024-mississauga.hub.arcgis.com/",
-      tags: ["Next.js", "Leaflet.js", "Heatmap.js", "Open Data"],
-    },
-    {
-      title: "Fraser Hacks",
-      description:
-        "John Fraser Secondary School's official hackathon website. I was responsible for developing the animations and hackathon description section.",
-      imageUrl: "/hacks.png",
-      link: "https://www.fraserhacks.ca/",
-      tags: ["Next.js", "Tailwind CSS"],
-    },
-     {
-    title: 'FridgeFlow',
-    description:
-      "FridgeFlow is a project built for the IBMZ X UNSA hackathon. It utilizes IBM watsonx.ai and allows users to upload a fridge photo or enter ingredients, then get meal recommendations based on available food, expiry date, and health goals. It also provides recipes, nutrition tracking, grocery suggestions, and fridge storage management.",
-    imageUrl: '/Fridge.png',
-    link: 'https://devpost.com/software/fridgeflow',
-    tags: ['Machine Learning', 'watsonx.ai', 'Next.js', 'Tailwind CSS']
-  },
-    {
-      title: "Discover UofT: DeerHacks",
-      description:
-        "A website designed for clubs at the University of Toronto to post upcoming events and notify users. I worked on the frontend and integrated a machine learning model to personalize event recommendations for users.",
-      imageUrl: "/discover-utm.png",
-      link: "https://devpost.com/software/discover-utm",
-      tags: ["Next.js", "Python", "Machine Learning", "Firebase", "Docker"],
-    },
-    {
-      title: "Scholar",
-      description:
-        "A streamlined school and course manager that allows students to take notes, set reminders, save important links, keep track of their schedule, the weather and any upcoming assessments",
-      imageUrl: "/scholar.png",
-      link: "https://scholar-j.vercel.app/",
-      tags: ["Next.js", "Tailwind CSS"],
-    },
-    {
-      title: "Grade Genius",
-      description:
-        "A comprehensive course manager app utilizing Flask, SQL and JavaScript. This application allows students to track course assessments, grades, goals, study times and notes.",
-      imageUrl: "/grade-genius.png",
-      link: "https://youtu.be/cccXBHTkUmE?si=prIcJLCm2WQCiaNT",
-      tags: ["Flask", "SQL", "JavaScript", "Django"],
-    },
-    {
-      title: "Relief Exchange",
-      description:
-        "Designed to alleviate poverty, this platform provides a connection for donors and those in need. It facilitates an impactful exchange of resources, easily reaching the underprivileged and those willing to help. I worked on both the backend and frontend, utilizing Golang, Next.js and Firebase.",
-      imageUrl: "/relief-ex.png",
-      link: "https://reliefexchange.aritrosaha.ca/",
-      tags: ["Golang", "Next.js", "Firebase", "Docker"],
-    },
-    {
-      title: "Mindfulness and Meditation",
-      description:
-        "An application for anyone interested in starting meditation practice. Includes a mindfulness course, meditation timer and calendar.",
-      imageUrl: "/mindfulness.png",
-      link: "https://mindfulness-eight.vercel.app/",
-      tags: ["Next.js", "Tailwind CSS", "Vercel"],
-    },
-    {
-      title: "ChemQuest-Brookedge Academy",
-      description:
-        "An interactive app developed for Brookedge Academy. I received the Volunteer of the Year award for the development of this app. It was posted on Brookedge Academy's main website. The interactive quizzes and features were used in the Young Chemists Workshop I led.",
-      imageUrl: "/chem.png",
-      link: "https://chemquest.vercel.app/",
-      tags: ["Javascript", "HTML", "CSS"],
-    },
-    {
-      title: "Canadian High Schools",
-      description:
-        "Led the development of a wiki platform where high school students can share tools and information while earning volunteer hours. My role focused on using Django to build a user-friendly interface.",
-      imageUrl: "/chs-logo.png",
-      link: "http://cahighschools.org/login",
-      tags: ["Django", "Python", "PostgreSQL"],
-    },
-    {
-      title: "Tracker",
-      description:
-        "It has been proven that it is easier to build habits than to break them. This application acts as a progress tracker for anyone looking to set goals and improve their daily lives.",
-      imageUrl: "/tracker.png",
-      link: "https://tracker-six-orpin.vercel.app/",
-      tags: ["Next.js", "Tailwind CSS"],
-    },
-  ];
-
-  return (
-    <motion.section
-      key="projects"
-      initial={{ opacity: 0, y: 24, scale: 0.98 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, y: -24, scale: 0.98 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
-      className="mx-auto w-full max-w-7xl px-4"
-    >
-      <div className="mb-10 text-center">
-        <p className="mb-3 text-xs uppercase tracking-[0.35em] text-white/50">
-          Projects
-        </p>
-        <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-          Projects
-        </h2>
+        <div className="relative order-1 min-h-[260px] h-full sm:order-2">
+          <Image
+            src="/profile_pic.jpeg"
+            alt="Joshua Chou"
+            fill
+            sizes="(min-width: 640px) 220px, 100vw"
+            className="object-cover"
+          />
+        </div>
       </div>
-
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project) => (
-          <a
-            key={project.title}
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-          >
-            <div className="relative h-48 w-full">
-              <Image
-                src={project.imageUrl}
-                alt={project.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            <div className="p-6">
-              <h3 className="mb-3 text-xl font-bold text-white">
-                {project.title}
-              </h3>
-
-              <p className="mb-4 text-sm leading-6 text-white/70">
-                {project.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full bg-blue-600 px-3 py-1 text-xs font-medium text-white"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </a>
-        ))}
-      </div>
-    </motion.section>
+    </motion.aside>
   );
 }
 
 export default function Home() {
-  return (
-    <main className="relative min-h-screen scroll-smooth overflow-x-hidden bg-neutral-950 text-white">
-      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.12),transparent_35%),radial-gradient(circle_at_top,rgba(255,255,255,0.06),transparent_42%)]" />
+  const reduceMotion = useReducedMotion();
 
+  return (
+    <main className="relative min-h-screen overflow-x-hidden bg-[#001734] text-white">
       <CloudNav />
 
       <section
         id="home"
-        className="relative z-10 flex min-h-screen scroll-mt-32 flex-col px-6 pb-8 pt-32"
+        className="relative z-10 flex flex-col px-6 pb-4 pt-24 sm:pb-6 sm:pt-28"
       >
         <motion.header
-          initial={{ opacity: 0, y: 18 }}
+          initial={reduceMotion ? false : { opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}
           className="text-center"
         >
-          <p className="mb-3 text-sm uppercase tracking-[0.35em] text-white/60">
-            Portfolio
-          </p>
-
-          <a
-            href="#home"
-            className="text-4xl font-semibold tracking-tight sm:text-6xl"
-          >
+          <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl">
             Joshua Chou
-          </a>
-
-          <p className="mt-4 text-sm text-white/70 sm:text-base">
-            I am a computer science and statistics major at the University of Toronto and a
-            <br />
-            <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
-              software developer
-            </span>
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/85 sm:text-base">
+            I&apos;m a software engineer at CAGH UTM and a computer science and
+            statistics major. I enjoy meditation, music and <p className="text-green-400">touching grass</p> (which is rare for a CS major in 2026).
           </p>
         </motion.header>
 
-        <div className="flex flex-1 items-center justify-center pt-10">
-          <div className="flex min-h-[520px] w-full items-center justify-center">
+        <div className="flex flex-1 items-center justify-center pt-4">
+          <div className="flex min-h-[300px] w-full items-center justify-center sm:min-h-[340px]">
             <TreeStage />
           </div>
         </div>
       </section>
 
-      <section
-        id="about"
-        className="relative z-10 flex min-h-screen scroll-mt-28 items-center px-6 py-24"
-      >
+      <section className="relative z-10 flex flex-col items-center px-6 pb-16 pt-2 sm:pb-24 sm:pt-4">
         <AboutStage />
+        <div className="mt-6 grid w-full max-w-3xl gap-6 md:grid-cols-2">
+          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl sm:p-8">
+            <h2 className="text-xl font-semibold tracking-tight text-white/90">
+              Why I Code
+            </h2>
+            <p className="mt-4 text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
+              I code because...it&apos;s fun. I like coming up with ideas, and seeing
+              it appear on a page and eventually in the world. It&apos;s always nice
+              to see that people are using the things I&apos;ve built. In a small
+              way, it&apos;s my contribution to the world.
+            </p>
+          </div>
+          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl sm:p-8">
+            <h2 className="text-xl font-semibold tracking-tight text-white/90">
+              My Philosophy
+            </h2>
+            <p className="mt-4 text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
+              I do my best work when I&apos;m having fun. But to get to that
+              point, I need to be willing to put in the work.
+            </p>
+            <p className="mt-4 text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
+              For example, I started my meditative discipline at 13 years old. I
+              couldn&apos;t get my mind to calm down, but I kept practicing every
+              day and I&apos;ve found that something difficult can become
+              enjoyable ... and that I can have a lot of fun just turning inwards.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section
-        id="projects"
-        className="relative z-10 min-h-screen scroll-mt-28 px-6 py-24"
-      >
-        <ProjectsStage />
-      </section>
+      <FeaturedWork />
+      <MoreProjects />
 
-      <div className="relative z-10 border-t border-white/10 bg-white/5 px-6 py-4 text-center text-sm text-white/60 backdrop-blur-xl">
+      <div className="relative z-10 bg-[#001734] px-6 py-8 text-center text-sm text-white/60">
         <Footer />
       </div>
-
-      <style jsx global>{`
-        html {
-          scroll-behavior: smooth;
-        }
-      `}</style>
     </main>
   );
 }
