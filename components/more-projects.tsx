@@ -15,7 +15,7 @@ function MoreProjects() {
             id="more-projects-heading"
             className="text-3xl font-semibold tracking-tight sm:text-4xl"
           >
-            What I've Built
+            What I&apos;ve Built
           </h2>
         </header>
 

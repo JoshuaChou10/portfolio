@@ -19,7 +19,7 @@ function FeaturedWork() {
             id="featured-heading"
             className="text-3xl font-semibold tracking-tight sm:text-4xl"
           >
-            Projects I'm Most Proud Of
+            Projects I&apos;m Most Proud Of
           </h2>
         </header>
 
