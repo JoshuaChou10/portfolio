@@ -255,6 +255,15 @@ function AboutStage() {
             <p className="mt-5 font-semibold text-white/90">I&apos;ve built...</p>
             <ul className="ml-5 list-disc space-y-1">
               <li>
+                Built the official{" "}
+                <a
+                  href="#cagh-utm"
+                  className="font-medium text-blue-300 underline underline-offset-4 hover:text-blue-200"
+                >
+                  CAGH UTM website
+                </a>
+              </li>
+              <li>
                 Developed the official{" "}
                 <a
                   href="#fraserhacks"
@@ -321,7 +330,7 @@ export default function Home() {
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/85 sm:text-base">
             I&apos;m a software engineer at CAGH UTM and a computer science and
-            statistics major. I enjoy meditation, music and <p className="text-green-400">touching grass</p> (which is rare for a CS major in 2026).
+            statistics major. I enjoy meditation, music and <span className="text-green-400">touching grass</span> (which is rare for a CS major in 2026).
           </p>
         </motion.header>
 

@@ -24,9 +24,28 @@ export type Project = {
   featured?: FeaturedDetails;
 };
 
-export const FEATURED_PROJECT_IDS = ["solar", "chemquest", "fraserhacks"] as const;
+export const FEATURED_PROJECT_IDS = ["cagh-utm", "solar", "chemquest", "fraserhacks"] as const;
 
 export const projects: Project[] = [
+  {
+    id: "cagh-utm",
+    title: "CAGH UTM",
+    description:
+      "Official website for the University of Toronto Mississauga chapter of the Canadian Association for Global Health. I developed the site using Supbase and Resend for the event sign up system, and Nextjs, Tailwind CSS for the interface.",
+    imageUrl: "/cagh-utm.png",
+    imageAlt: "CAGH UTM official website",
+    link: "https://www.cagh-utm.com/",
+    tags: ["Supabase", "Resend", "Next.js", "Tailwind CSS"],
+    featured: {
+      name: "CAGH UTM",
+      outcome: "Official chapter website",
+      badge: "Lead Software Developer",
+      summary:
+      "Official website for the University of Toronto Mississauga chapter of the Canadian Association for Global Health. I developed the site using Supbase and Resend for the event sign up system, and Nextjs, Tailwind CSS for the interface.",
+      imageFit: "cover",
+      links: [{ label: "View Site", href: "https://www.cagh-utm.com/" }],
+    },
+  },
   {
     id: "solar",
     title: "Solar Index Map: Mississauga Open Data Hackathon 4th place overall",
@@ -141,7 +160,7 @@ export const projects: Project[] = [
     tags: ["Javascript", "HTML", "CSS"],
     featured: {
       name: "ChemQuest",
-      outcome: "Used by 100+ students",
+      outcome: "Used by 200+ students",
       badge: "Volunteer of the Year",
       summary:
         "Interactive chemistry learning app for Brookedge Academy, with quizzes and lesson pages used in the Young Chemists workshop I led. Can be found on Brookedge Academy's main website.",

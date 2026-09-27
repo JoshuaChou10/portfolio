@@ -57,6 +57,7 @@ function FeaturedWork() {
                     src={project.imageUrl}
                     alt={project.imageAlt}
                     fill
+                    unoptimized={project.imageUrl.endsWith(".svg")}
                     sizes="(min-width: 768px) 50vw, 100vw"
                     className={
                       featured.imageFit === "contain"
